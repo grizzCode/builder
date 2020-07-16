@@ -9,7 +9,7 @@ function App() {
     </div>
     <p>some text</p>
     <nav class="nav-bar">
-      <a>Link</a>
+      
     </nav>
     </>
   );
