@@ -5,6 +5,8 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import styled from "styled-components";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
+import { Link } from 'react-router-dom'
+
 
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -21,6 +23,9 @@ export default function FadeMenu() {
   const themeObject = {
     palette: {
       type: 'dark'
+    },
+    typography: {
+      fontFamily: ['Work Sans', 'sans-serif'],
     }
   }
 
@@ -47,24 +52,16 @@ export default function FadeMenu() {
           <MenuItem onClick={handleClose}>Project 5</MenuItem>
           <MenuItem onClick={handleClose}>Project 6</MenuItem>
         </Menu>
-        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-          Process ^
-      </StyledButton>
-        <Menu
-          id="fade-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={open}
-          onClose={handleClose}
-          TransitionComponent={Fade}
-        >
-          <MenuItem onClick={handleClose}>Project 1</MenuItem>
-          <MenuItem onClick={handleClose}>Project 2</MenuItem>
-          <MenuItem onClick={handleClose}>Project 3</MenuItem>
-          <MenuItem onClick={handleClose}>Project 4</MenuItem>
-          <MenuItem onClick={handleClose}>Project 5</MenuItem>
-          <MenuItem onClick={handleClose}>Project 6</MenuItem>
-        </Menu>
+        <StyledButton>
+          <StyledLink to="/process">
+            Process
+          </StyledLink>
+        </StyledButton> 
+        <StyledButton>
+          <StyledLink to="/about">
+            About
+          </StyledLink>         
+        </StyledButton> 
       </ThemeProvider>
     </NavDiv>
   );
@@ -72,7 +69,6 @@ export default function FadeMenu() {
 
 const StyledButton = styled(Button)`
   &&& {
-    font-family: 'Work Sans', sans-serif;
     color: white;
     margin-right: 20px;
   }
@@ -86,4 +82,9 @@ const NavDiv = styled.div`
   bottom: 0;
   left: 0;
 
+`
+
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: inherit
 `

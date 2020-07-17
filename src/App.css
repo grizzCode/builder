@@ -1,5 +1,7 @@
-body {
+.home {
   background: url(images/Screen\ Shot\ 2020-07-16\ at\ 11.15.29\ AM.png) no-repeat center center fixed;
   background-size: cover;
+  height: 900px;
+  width: auto;
 }
 
