@@ -3,6 +3,6 @@ import React from 'react'
 
 export default function Process() {
   return (
-    <p>Process</p>
+    <p>This is the process page.</p>
   )
 }
