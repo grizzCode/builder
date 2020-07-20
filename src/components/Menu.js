@@ -35,8 +35,26 @@ export default function FadeMenu() {
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-          Projects ^
-      </StyledButton>
+          In-Progress ^
+        </StyledButton>
+        <Menu
+          id="fade-menu"
+          anchorEl={anchorEl}
+          keepMounted
+          open={open}
+          onClose={handleClose}
+          TransitionComponent={Fade}
+        >
+          <MenuItem onClick={handleClose}>Project 1</MenuItem>
+          <MenuItem onClick={handleClose}>Project 2</MenuItem>
+          <MenuItem onClick={handleClose}>Project 3</MenuItem>
+          <MenuItem onClick={handleClose}>Project 4</MenuItem>
+          <MenuItem onClick={handleClose}>Project 5</MenuItem>
+          <MenuItem onClick={handleClose}>Project 6</MenuItem>
+        </Menu>
+        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+          Completed Projects ^
+        </StyledButton>
         <Menu
           id="fade-menu"
           anchorEl={anchorEl}
@@ -56,22 +74,17 @@ export default function FadeMenu() {
           <StyledLink to="/process">
             Process
           </StyledLink>
-        </StyledButton> 
+        </StyledButton>
         <StyledButton>
           <StyledLink to="/about">
             About
-          </StyledLink>         
-        </StyledButton> 
+          </StyledLink>
+        </StyledButton>
         <StyledButton>
           <StyledLink to="/green-building">
             Green Building
-          </StyledLink>         
-        </StyledButton> 
-        <StyledButton>
-          <StyledLink to="/case-studies">
-            Case Studies / Details
-          </StyledLink>         
-        </StyledButton> 
+          </StyledLink>
+        </StyledButton>
       </ThemeProvider>
     </NavDiv>
   );
@@ -85,7 +98,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 50%;
+  width: auto;
   padding: 4px;
   background-color: black;
   position: fixed;
