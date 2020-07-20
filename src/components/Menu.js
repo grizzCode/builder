@@ -63,14 +63,14 @@ export default function FadeMenu() {
           </StyledLink>         
         </StyledButton> 
         <StyledButton>
-          {/* <StyledLink to="/about"> */}
+          <StyledLink to="/green-building">
             Green Building
-          {/* </StyledLink>          */}
+          </StyledLink>         
         </StyledButton> 
         <StyledButton>
-          {/* <StyledLink to="/about"> */}
+          <StyledLink to="/case-studies">
             Case Studies / Details
-          {/* </StyledLink>          */}
+          </StyledLink>         
         </StyledButton> 
       </ThemeProvider>
     </NavDiv>
@@ -85,7 +85,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 70%;
+  width: 50%;
   padding: 4px;
   background-color: black;
   position: fixed;

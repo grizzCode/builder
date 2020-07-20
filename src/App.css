@@ -1,26 +1,7 @@
 .home {
   background: url(images/Screen\ Shot\ 2020-07-16\ at\ 11.15.29\ AM.png) no-repeat center center fixed;
   background-size: cover;
-  height: 900px;
+  height: 800px;
   width: auto;
 }
 
-.home-header {
-  display: flex;
-  width: 90%;
-}
-
-.home-header__bar {
-  height: 20px;
-  background-color: black;
-  width: 50%;
-  margin-top: 10px;
-}
-
-.home-header__logo {
-  height: 45px;
-  width: 45px;
-  margin-left: 48px;
-  background-color: white;
-  border-radius: 50%;
-}
