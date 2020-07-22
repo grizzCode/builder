@@ -5,8 +5,11 @@ import Home from './components/Home'
 import Process from './components/Process'
 import About from './components/About'
 import Green_Building from './components/Green_Building';
+import Pineridge from './components/Pineridge'
+import Robertson from './components/Robertson'
 
 function App() {
+
   return (
     <BrowserRouter>
       <Switch>
@@ -14,6 +17,8 @@ function App() {
           <Route exact path="/process" component={Process}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/green-building" component={Green_Building}/>
+          <Route exact path="/pineridge" component={Pineridge}/>
+          <Route exact path="/robertson" component={Robertson}/>
       </Switch>
     </BrowserRouter>
   );

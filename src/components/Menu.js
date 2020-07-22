@@ -44,6 +44,11 @@ export default function FadeMenu() {
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
+        <StyledButton>
+          <StyledLink to="/">
+            Home
+          </StyledLink>
+        </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           In-Progress
         </StyledButton>
@@ -55,8 +60,16 @@ export default function FadeMenu() {
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose}>Project 1</MenuItem>
-          <MenuItem onClick={handleClose}>Project 2</MenuItem>
+          <MenuItem onClick={handleClose}>
+            <StyledLink to="/robertson">
+              Robertson
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose}>
+           <StyledLink to="/pineridge">
+              Pineridge
+            </StyledLink>
+          </MenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed Projects
@@ -104,11 +117,11 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 50%;
+  width: 75%;
   padding: 4px;
   background-color: white;
   text-align: right;
-  margin-left: 50%
+  margin-left: 25%
 `
 
 const StyledLink = styled(Link)`
