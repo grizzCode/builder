@@ -22,7 +22,7 @@ export default class SimpleSlider extends React.Component {
     `
 
     const StyledDiv = styled.div`
-      height: 65vh;
+      height: 72vh;
     `
 
     return (

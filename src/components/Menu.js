@@ -11,14 +11,22 @@ import { Link } from 'react-router-dom'
 
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl2, setAnchorEl2] = React.useState(null);
   const open = Boolean(anchorEl);
+  const open2 = Boolean(anchorEl2);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
+  };
+  const handleClose2 = () => {
+    setAnchorEl2(null);
   };
 
   const themeObject = {
@@ -27,6 +35,7 @@ export default function FadeMenu() {
     // },
     typography: {
       fontFamily: ['Work Sans', 'sans-serif'],
+      fontWeight: 300,
     }
   }
 
@@ -35,11 +44,11 @@ export default function FadeMenu() {
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
-        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+        <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           In-Progress
         </StyledButton>
         <Menu
-          id="fade-menu"
+          id="progress-menu"
           anchorEl={anchorEl}
           keepMounted
           open={open}
@@ -48,28 +57,24 @@ export default function FadeMenu() {
         >
           <MenuItem onClick={handleClose}>Project 1</MenuItem>
           <MenuItem onClick={handleClose}>Project 2</MenuItem>
-          <MenuItem onClick={handleClose}>Project 3</MenuItem>
-          <MenuItem onClick={handleClose}>Project 4</MenuItem>
-          <MenuItem onClick={handleClose}>Project 5</MenuItem>
-          <MenuItem onClick={handleClose}>Project 6</MenuItem>
         </Menu>
-        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
+        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed Projects
         </StyledButton>
         <Menu
           id="fade-menu"
-          anchorEl={anchorEl}
+          anchorEl={anchorEl2}
           keepMounted
-          open={open}
-          onClose={handleClose}
+          open={open2}
+          onClose={handleClose2}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose}>Project 1</MenuItem>
-          <MenuItem onClick={handleClose}>Project 2</MenuItem>
-          <MenuItem onClick={handleClose}>Project 3</MenuItem>
-          <MenuItem onClick={handleClose}>Project 4</MenuItem>
-          <MenuItem onClick={handleClose}>Project 5</MenuItem>
-          <MenuItem onClick={handleClose}>Project 6</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 1</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 2</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 3</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 4</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 5</MenuItem>
+          <MenuItem onClick={handleClose2}>Project 6</MenuItem>
         </Menu>
         <StyledButton>
           <StyledLink to="/process">
@@ -108,5 +113,5 @@ const NavDiv = styled.div`
 
 const StyledLink = styled(Link)`
   color: inherit;
-  text-decoration: inherit
+  text-decoration: inherit;
 `

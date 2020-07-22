@@ -24,16 +24,14 @@ export default function Home() {
           <StyledP>Connect</StyledP>
           <div>
             <a href="https://www.facebook.com/ttmountainbuilder/">
-              <StyledFacebook fontSize="large"/>
+              <StyledFacebook />
             </a>
           </div>
           <div>        
             <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
-              <LogoImg src={HouzzIcon} width="26.25" height="26.25"/>
+              <LogoImg src={HouzzIcon} width="18" height="18"/>
             </a>
           </div>
-           
-
         </FooterRight>
       </Footer>
     </section>
@@ -41,14 +39,14 @@ export default function Home() {
 }
 
 const StyledLogo = styled.img`
-  height: 160px;
+  height: 150px;
   width: auto;
   margin-left: 20px
 `
 
 const Footer = styled.div`
   background-color: white;
-  height: 190px;
+  height: 160px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -73,11 +71,12 @@ const FooterRight = styled.div`
 
 const StyledP = styled.p`
   border-bottom: 2px solid black;
+  font-size: 14px;
 `
 
 const StyledFacebook = styled(FacebookIcon)`
   color: black;
-  margin-top: 12px;
+  margin-top: 8px;
 `
 
 const LogoImg = styled.img`
@@ -86,9 +85,9 @@ const LogoImg = styled.img`
 `
 
 const ContactP = styled.p`
-  font-weight: 300;
+  font-size: 12px;
 `
 const ContactA = styled.a`
-  font-weight: 300;
-  color: rgb(158, 203, 40)
+  color: rgb(158, 203, 40);
+  font-size: 12px;
 `
