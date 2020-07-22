@@ -4,11 +4,13 @@ import styled from 'styled-components'
 import Logo from '../images/logo.png'
 import FacebookIcon from '@material-ui/icons/Facebook'
 import HouzzIcon from '../images/houzz.png'
+import Slider from './Slideshow'
 
 export default function Home() {
   return (
     <section class="home">
       <Menu/>
+      <Slider/>
       <Footer>
         <StyledLogo src={Logo}/>
         <FooterCenter>
@@ -21,15 +23,14 @@ export default function Home() {
         <FooterRight>
           <StyledP>Connect</StyledP>
           <div>
-          <a href="https://www.facebook.com/ttmountainbuilder/">
+            <a href="https://www.facebook.com/ttmountainbuilder/">
               <StyledFacebook fontSize="large"/>
             </a>
           </div>
-          <div>
-          
-          <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
-            <LogoImg src={HouzzIcon} width="26.25" height="26.25"/>
-          </a>
+          <div>        
+            <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
+              <LogoImg src={HouzzIcon} width="26.25" height="26.25"/>
+            </a>
           </div>
            
 
@@ -47,7 +48,7 @@ const StyledLogo = styled.img`
 
 const Footer = styled.div`
   background-color: white;
-  height: 180px;
+  height: 190px;
   width: 100%;
   position: fixed;
   bottom: 0;
@@ -76,10 +77,12 @@ const StyledP = styled.p`
 
 const StyledFacebook = styled(FacebookIcon)`
   color: black;
+  margin-top: 12px;
 `
 
 const LogoImg = styled.img`
   margin: 4px;
+  margin-top: 20px;
 `
 
 const ContactP = styled.p`
