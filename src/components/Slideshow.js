@@ -9,35 +9,39 @@ export default class SimpleSlider extends React.Component {
     var settings = {
       dots: false,
       autoplay: true,
-      autoplaySpeed: 7000,
+      autoplaySpeed: 5000,
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1
     };
 
     const StyledImg = styled.img`
-      height: 550px;
+      height: 100%;
       width: auto;
       margin: auto;
     `
 
+    const StyledDiv = styled.div`
+      height: 65vh;
+    `
+
     return (
       <Slider {...settings}>
-        <div>
+        <StyledDiv>
           <StyledImg src={require('../images/Slide1.jpg')}/>
-        </div>
-        <div>
+        </StyledDiv>
+        <StyledDiv>
          <StyledImg src={require('../images/Slide2.jpg')}/> 
-        </div>
-        <div>
+        </StyledDiv>
+        <StyledDiv>
           <StyledImg src={require('../images/Slide3.jpg')}/>
-        </div>
-        <div>
+        </StyledDiv>
+        <StyledDiv>
           <StyledImg src={require('../images/Slide4.jpg')}/>
-        </div>
-        <div>
+        </StyledDiv>
+        <StyledDiv>
           <StyledImg src={require('../images/Slide5.jpg')}/>
-        </div>
+        </StyledDiv>
       </Slider>
     );
   }
