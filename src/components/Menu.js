@@ -8,6 +8,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
 
 
+
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -21,9 +22,9 @@ export default function FadeMenu() {
   };
 
   const themeObject = {
-    palette: {
-      type: 'dark'
-    },
+    // palette: {
+    //   type: 'dark'
+    // },
     typography: {
       fontFamily: ['Work Sans', 'sans-serif'],
     }
@@ -35,7 +36,7 @@ export default function FadeMenu() {
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-          In-Progress ^
+          In-Progress
         </StyledButton>
         <Menu
           id="fade-menu"
@@ -53,7 +54,7 @@ export default function FadeMenu() {
           <MenuItem onClick={handleClose}>Project 6</MenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick}>
-          Completed Projects ^
+          Completed Projects
         </StyledButton>
         <Menu
           id="fade-menu"
@@ -92,19 +93,17 @@ export default function FadeMenu() {
 
 const StyledButton = styled(Button)`
   &&& {
-    color: white;
+    color: black;
     margin-right: 20px;
   }
 `;
 
 const NavDiv = styled.div`
-  width: auto;
+  width: 50%;
   padding: 4px;
-  background-color: black;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-
+  background-color: white;
+  text-align: right;
+  margin-left: 50%
 `
 
 const StyledLink = styled(Link)`
