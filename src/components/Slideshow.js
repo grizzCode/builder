@@ -16,7 +16,7 @@ export default class SimpleSlider extends React.Component {
     };
 
     const StyledImg = styled.img`
-      height: 700px;
+      height: 550px;
       width: auto;
       margin: auto;
     `
@@ -24,19 +24,19 @@ export default class SimpleSlider extends React.Component {
     return (
       <Slider {...settings}>
         <div>
-          <StyledImg src={require('../images/Slide_1.jpg')}/>
+          <StyledImg src={require('../images/Slide1.jpg')}/>
         </div>
         <div>
-         <StyledImg src={require('../images/Slide_2.jpg')}/> 
+         <StyledImg src={require('../images/Slide2.jpg')}/> 
         </div>
         <div>
-          <StyledImg src={require('../images/Slide_3.jpg')}/>
+          <StyledImg src={require('../images/Slide3.jpg')}/>
         </div>
         <div>
-          <StyledImg src={require('../images/Slide_4.jpg')}/>
+          <StyledImg src={require('../images/Slide4.jpg')}/>
         </div>
         <div>
-          <StyledImg src={require('../images/Slide_5.jpg')}/>
+          <StyledImg src={require('../images/Slide5.jpg')}/>
         </div>
       </Slider>
     );
