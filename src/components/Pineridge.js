@@ -8,8 +8,11 @@ export default function Pineridge(props) {
     <>
       <Menu/>
       <StyledDiv>
-        <StyledHeader>PINERIDGE PASSIVE HOUSE</StyledHeader>
-        <StyledImg src={require('../images/Pineridge.jpg')}/>
+        <HeaderDiv>
+        <StyledHeader>PINERIDGE</StyledHeader>
+        </HeaderDiv>
+        
+        <StyledImg src={require('../images/Pineridge_res.jpg')}/>
       </StyledDiv>
     </>
   )
@@ -24,7 +27,8 @@ const StyledImg = styled.img`
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-
+  padding-left: 8px;
+  padding-right: 20px;
 `
 
 const StyledDiv = styled.div`
@@ -32,4 +36,8 @@ const StyledDiv = styled.div`
   justify-content: center
   width: 100%;
   margin-top: 30px;
+`
+
+const HeaderDiv = styled.div`
+  border-right: 2px solid black;
 `
