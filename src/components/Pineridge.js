@@ -2,8 +2,8 @@ import React from 'react'
 import Menu from './Menu'
 import styled from 'styled-components'
 
-export default function Pineridge(props) {
-  console.log(props)
+export default function Pineridge() {
+
   return(
     <>
       <Menu/>

@@ -28,7 +28,6 @@ const StyledHeader = styled.h1`
   font-weight: 300;
   padding-left: 8px;
   padding-right: 20px;
-
 `
 
 const StyledDiv = styled.div`

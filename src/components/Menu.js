@@ -93,13 +93,13 @@ export default function FadeMenu() {
           <StyledLink to="/process">
             Process
           </StyledLink>
-        </StyledButton>
+        </StyledButton> */}
         <StyledButton>
           <StyledLink to="/about">
             About
           </StyledLink>
         </StyledButton>
-        <StyledButton>
+        {/* <StyledButton>
           <StyledLink to="/green-building">
             Green Building
           </StyledLink>
