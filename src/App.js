@@ -7,6 +7,7 @@ import About from './components/About'
 import Green_Building from './components/Green_Building';
 import Pineridge from './components/Pineridge'
 import Robertson from './components/Robertson'
+import Testimonials from './components/Testimonials'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route exact path="/green-building" component={Green_Building}/>
           <Route exact path="/pineridge" component={Pineridge}/>
           <Route exact path="/robertson" component={Robertson}/>
+          <Route exact path="/testimonials" component={Testimonials}/>
       </Switch>
     </BrowserRouter>
   );

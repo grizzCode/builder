@@ -99,11 +99,11 @@ export default function FadeMenu() {
             About
           </StyledLink>
         </StyledButton>
-        {/* <StyledButton>
-          <StyledLink to="/green-building">
-            Green Building
+        <StyledButton>
+          <StyledLink to="/testimonials">
+            Testimonials
           </StyledLink>
-        </StyledButton> */}
+        </StyledButton>
       </ThemeProvider>
     </NavDiv>
   );

@@ -24,8 +24,9 @@ export default function About() {
 
 const StyledText = styled.div`
   margin: auto;
-  height: 80vh;
+  height: 60vh;
   width: auto;
+  margin-top: 90px;
 `
 
 const StyledHeader = styled.h1`
@@ -44,7 +45,7 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  
+  width: 650px;
 `
 
 const StyledP = styled.p`
