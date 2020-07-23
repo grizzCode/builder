@@ -11,23 +11,23 @@ import { Link } from 'react-router-dom'
 
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  const [anchorEl2, setAnchorEl2] = React.useState(null);
+  // const [anchorEl2, setAnchorEl2] = React.useState(null);
   const open = Boolean(anchorEl);
-  const open2 = Boolean(anchorEl2);
+  // const open2 = Boolean(anchorEl2);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  const handleClick2 = (event) => {
-    setAnchorEl2(event.currentTarget);
-  };
+  // const handleClick2 = (event) => {
+  //   setAnchorEl2(event.currentTarget);
+  // };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
-  const handleClose2 = () => {
-    setAnchorEl2(null);
-  };
+  // const handleClose2 = () => {
+  //   setAnchorEl2(null);
+  // };
 
   const themeObject = {
     // palette: {
