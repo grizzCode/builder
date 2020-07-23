@@ -65,8 +65,7 @@ export default function Review() {
             <StyledP>
             Quality and attention to details would describe T&T Mountain Builders.  As a supplier I have worked with T&T for many years.  Travis is one of the most organized, and highest quality framers I have seen.  You will be impressed with the way he organizes, and also accomplishes things.  His knowledge of the building process is very evident in conversation as well as when you work together.  Life is easier when you work with someone like Travis.
             </StyledP>
-          </LeftDiv>
-        
+          </LeftDiv>     
         </StyledText>
       </StyledDiv>
     </>
@@ -75,9 +74,9 @@ export default function Review() {
 
 const StyledText = styled.div`
   margin: auto;
-  height: 700px;
+  height: 540px;
   width: auto;
-  margin-top: 60px;
+  margin-top: 30px;
   overflow: scroll;
 `
 
