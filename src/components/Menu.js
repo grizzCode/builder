@@ -89,11 +89,11 @@ export default function FadeMenu() {
           <MenuItem onClick={handleClose2}>Project 5</MenuItem>
           <MenuItem onClick={handleClose2}>Project 6</MenuItem>
         </Menu> */}
-        {/* <StyledButton>
-          <StyledLink to="/process">
-            Process
+        <StyledButton>
+          <StyledLink to="/canyon_dr">
+            Canyon Dr
           </StyledLink>
-        </StyledButton> */}
+        </StyledButton>
         <StyledButton>
           <StyledLink to="/about">
             About

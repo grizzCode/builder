@@ -77,11 +77,19 @@ const StyledP = styled.p`
 const StyledFacebook = styled(FacebookIcon)`
   color: black;
   margin-top: 8px;
+  &:hover {
+    transition: transform .2s;
+    transform: scale(1.4);
+  }
 `
 
 const LogoImg = styled.img`
   margin: 4px;
   margin-top: 20px;
+  &:hover {
+    transition: transform .2s;
+    transform: scale(1.4);
+  }
 `
 
 const ContactP = styled.p`

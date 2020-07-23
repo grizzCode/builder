@@ -8,6 +8,7 @@ import Green_Building from './components/Green_Building';
 import Pineridge from './components/Pineridge'
 import Robertson from './components/Robertson'
 import Testimonials from './components/Testimonials'
+import CanyonDr from './components/CanyonDr'
 
 function App() {
 
@@ -21,6 +22,7 @@ function App() {
           <Route exact path="/pineridge" component={Pineridge}/>
           <Route exact path="/robertson" component={Robertson}/>
           <Route exact path="/testimonials" component={Testimonials}/>
+          <Route exact path="/canyon_dr" component={CanyonDr}/>
       </Switch>
     </BrowserRouter>
   );
