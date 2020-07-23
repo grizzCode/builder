@@ -11,23 +11,23 @@ import { Link } from 'react-router-dom'
 
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
-  // const [anchorEl2, setAnchorEl2] = React.useState(null);
+  const [anchorEl2, setAnchorEl2] = React.useState(null);
   const open = Boolean(anchorEl);
-  // const open2 = Boolean(anchorEl2);
+  const open2 = Boolean(anchorEl2);
 
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  // const handleClick2 = (event) => {
-  //   setAnchorEl2(event.currentTarget);
-  // };
+  const handleClick2 = (event) => {
+    setAnchorEl2(event.currentTarget);
+  };
 
   const handleClose = () => {
     setAnchorEl(null);
   };
-  // const handleClose2 = () => {
-  //   setAnchorEl2(null);
-  // };
+  const handleClose2 = () => {
+    setAnchorEl2(null);
+  };
 
   const themeObject = {
     // palette: {
@@ -71,7 +71,7 @@ export default function FadeMenu() {
             </StyledLink>
           </MenuItem>
         </Menu>
-        {/* <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
+        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed Projects
         </StyledButton>
         <Menu
@@ -82,18 +82,17 @@ export default function FadeMenu() {
           onClose={handleClose2}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose2}>Project 1</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 2</MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/canyon_dr">
+                Canyon Dr
+            </StyledLink>
+          </MenuItem>
+          {/* <MenuItem onClick={handleClose2}>Project 2</MenuItem>
           <MenuItem onClick={handleClose2}>Project 3</MenuItem>
           <MenuItem onClick={handleClose2}>Project 4</MenuItem>
           <MenuItem onClick={handleClose2}>Project 5</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 6</MenuItem>
-        </Menu> */}
-        <StyledButton>
-          <StyledLink to="/canyon_dr">
-            Canyon Dr
-          </StyledLink>
-        </StyledButton>
+          <MenuItem onClick={handleClose2}>Project 6</MenuItem> */}
+        </Menu>
         <StyledButton>
           <StyledLink to="/about">
             About
