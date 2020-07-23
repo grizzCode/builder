@@ -113,6 +113,7 @@ const StyledButton = styled(Button)`
   &&& {
     color: black;
     margin-right: 20px;
+    font-size: 13px;
   }
 `;
 
@@ -126,5 +127,8 @@ const NavDiv = styled.div`
 
 const StyledLink = styled(Link)`
   color: inherit;
-  text-decoration: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Work Sans, sans-serif;
+  font-size: 13px;
 `
