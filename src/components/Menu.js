@@ -71,7 +71,7 @@ export default function FadeMenu() {
             </StyledLink>
           </MenuItem>
         </Menu>
-        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
+        {/* <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed Projects
         </StyledButton>
         <Menu
@@ -88,8 +88,8 @@ export default function FadeMenu() {
           <MenuItem onClick={handleClose2}>Project 4</MenuItem>
           <MenuItem onClick={handleClose2}>Project 5</MenuItem>
           <MenuItem onClick={handleClose2}>Project 6</MenuItem>
-        </Menu>
-        <StyledButton>
+        </Menu> */}
+        {/* <StyledButton>
           <StyledLink to="/process">
             Process
           </StyledLink>
@@ -103,7 +103,7 @@ export default function FadeMenu() {
           <StyledLink to="/green-building">
             Green Building
           </StyledLink>
-        </StyledButton>
+        </StyledButton> */}
       </ThemeProvider>
     </NavDiv>
   );
