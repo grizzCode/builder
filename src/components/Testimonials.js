@@ -74,7 +74,7 @@ export default function Review() {
 
 const StyledText = styled.div`
   margin: auto;
-  height: 540px;
+  height: 84vh;
   width: auto;
   margin-top: 30px;
   overflow: scroll;

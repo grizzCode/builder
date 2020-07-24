@@ -3,37 +3,15 @@ import Menu from './Menu'
 import styled from 'styled-components'
 import Logo from '../images/logo.png'
 import FacebookIcon from '@material-ui/icons/Facebook'
-import HouzzIcon from '../images/houzz.png'
+
 import Slider from './Slideshow'
 
 export default function Home() {
   return (
     <section class="home">
-      <Menu/>
+      
       <Slider/>
-      <Footer>
-        <StyledLogo src={Logo}/>
-        <FooterCenter>
-          <StyledP>Contact</StyledP>
-          <ContactP>435-640-3057</ContactP>
-          <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
-          <ContactP>PO Box 980547</ContactP>
-          <ContactP>Park City, Utah 84098</ContactP>
-        </FooterCenter>
-        <FooterRight>
-          <StyledP>Connect</StyledP>
-          <div>
-            <a href="https://www.facebook.com/ttmountainbuilder/">
-              <StyledFacebook />
-            </a>
-          </div>
-          <div>        
-            <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
-              <LogoImg src={HouzzIcon} width="18" height="18"/>
-            </a>
-          </div>
-        </FooterRight>
-      </Footer>
+      <Menu/>
     </section>
   )
 }

@@ -6,7 +6,8 @@ import Fade from '@material-ui/core/Fade';
 import styled from "styled-components";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { Link } from 'react-router-dom'
-
+import HouzzIcon from '../images/houzz.png'
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 export default function FadeMenu() {
@@ -30,9 +31,9 @@ export default function FadeMenu() {
   };
 
   const themeObject = {
-    // palette: {
-    //   type: 'dark'
-    // },
+    palette: {
+      type: 'dark'
+    },
     typography: {
       fontFamily: ['Work Sans', 'sans-serif'],
       fontWeight: 300,
@@ -103,25 +104,47 @@ export default function FadeMenu() {
             Testimonials
           </StyledLink>
         </StyledButton>
+        <StyledButton>
+          <StyledLink to="/contact_us">
+            Contact Us
+          </StyledLink>
+        </StyledButton>
+        <Button>
+          <a href="https://www.facebook.com/ttmountainbuilder/">
+           <StyledInstagram />
+          </a>
+        </Button>
+        <Button>
+          <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
+            <LogoImg src={HouzzIcon} width="20" height="20"/>
+          </a>
+        </Button>
       </ThemeProvider>
     </NavDiv>
   );
 }
 
+
+
 const StyledButton = styled(Button)`
   &&& {
-    color: black;
-    margin-right: 20px;
+    color: white;
+    margin-right: 13px;
+    margin-bottom: 3px;
     font-size: 13px;
+    
   }
 `;
 
 const NavDiv = styled.div`
-  width: 75%;
-  padding: 4px;
-  background-color: white;
+  width: 58%;
+  height: 44px;
+  background-color: #181818;
   text-align: right;
-  margin-left: 25%
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  border-radius: 4px 0px 0px 0px;
 `
 
 const StyledLink = styled(Link)`
@@ -130,4 +153,19 @@ const StyledLink = styled(Link)`
   text-decoration: none;
   font-family: Work Sans, sans-serif;
   font-size: 13px;
+  margin-bottom: 3px;
+`
+const LogoImg = styled.img`
+margin-top: 0px;
+  &:hover {
+    transition: transform .2s;
+    transform: scale(1.4);
+  }
+`
+const StyledInstagram = styled(InstagramIcon)`
+  color: white;
+  &:hover {
+    transition: transform .2s;
+    transform: scale(1.4);
+  }
 `

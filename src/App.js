@@ -9,6 +9,7 @@ import Pineridge from './components/Pineridge'
 import Robertson from './components/Robertson'
 import Testimonials from './components/Testimonials'
 import CanyonDr from './components/CanyonDr'
+import Contact from './components/Contact'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/process" component={Process}/>
           <Route exact path="/about" component={About}/>
+          <Route exact path="/contact_us" component={Contact}/>
           <Route exact path="/green-building" component={Green_Building}/>
           <Route exact path="/pineridge" component={Pineridge}/>
           <Route exact path="/robertson" component={Robertson}/>
