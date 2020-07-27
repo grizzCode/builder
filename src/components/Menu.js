@@ -88,11 +88,12 @@ export default function FadeMenu() {
                 Canyon Dr
             </StyledLink>
           </MenuItem>
-          {/* <MenuItem onClick={handleClose2}>Project 2</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 3</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 4</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 5</MenuItem>
-          <MenuItem onClick={handleClose2}>Project 6</MenuItem> */}
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/stagecoach">
+                Stagecoach Dr
+            </StyledLink>
+          </MenuItem>
+          
         </Menu>
         <StyledButton>
           <StyledLink to="/about">
@@ -110,7 +111,7 @@ export default function FadeMenu() {
           </StyledLink>
         </StyledButton>
         <Button>
-          <a href="https://www.facebook.com/ttmountainbuilder/">
+          <a href="https://www.instagram.com/tandttravis/?hl=en">
            <StyledInstagram />
           </a>
         </Button>
