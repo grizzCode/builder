@@ -11,6 +11,7 @@ import Testimonials from './components/Testimonials'
 import CanyonDr from './components/CanyonDr'
 import Contact from './components/Contact'
 import Stagecoach from './components/Stagecoach';
+import Hitching from './components/HitchingPost';
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route exact path="/testimonials" component={Testimonials}/>
           <Route exact path="/canyon_dr" component={CanyonDr}/>
           <Route exact path="/stagecoach" component={Stagecoach}/>
+          <Route exact path="/hitching_post" component={Hitching}/>
       </Switch>
     </BrowserRouter>
   );

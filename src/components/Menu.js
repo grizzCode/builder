@@ -93,6 +93,11 @@ export default function FadeMenu() {
                 Stagecoach Dr
             </StyledLink>
           </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/hitching_post">
+                Hitching Post Dr
+            </StyledLink>
+          </MenuItem>
           
         </Menu>
         <StyledButton>
