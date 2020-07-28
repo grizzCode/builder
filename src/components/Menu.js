@@ -98,6 +98,21 @@ export default function FadeMenu() {
                 Hitching Post Dr
             </StyledLink>
           </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/royal_st">
+                Royal St
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/thorjussen">
+                Thorjussen
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/jungfrau">
+                Jungfrau Hill Rd
+            </StyledLink>
+          </MenuItem>
           
         </Menu>
         <StyledButton>

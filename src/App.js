@@ -12,6 +12,9 @@ import CanyonDr from './components/CanyonDr'
 import Contact from './components/Contact'
 import Stagecoach from './components/Stagecoach';
 import Hitching from './components/HitchingPost';
+import Royal from './components/RoyalStreet';
+import Thor from './components/Thorjussen';
+import Jungfrau from './components/Jungfrau';
 
 function App() {
 
@@ -29,6 +32,9 @@ function App() {
           <Route exact path="/canyon_dr" component={CanyonDr}/>
           <Route exact path="/stagecoach" component={Stagecoach}/>
           <Route exact path="/hitching_post" component={Hitching}/>
+          <Route exact path="/royal_st" component={Royal}/>
+          <Route exact path="/jungfrau" component={Jungfrau}/>
+          <Route exact path="/thorjussen" component={Thor}/>
       </Switch>
     </BrowserRouter>
   );
