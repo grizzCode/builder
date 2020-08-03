@@ -33,8 +33,8 @@ function App() {
           <Route exact path="/stagecoach" component={Stagecoach}/>
           <Route exact path="/hitching_post" component={Hitching}/>
           <Route exact path="/royal_st" component={Royal}/>
-          <Route exact path="/jungfrau" component={Jungfrau}/>
-          <Route exact path="/thorjussen" component={Thor}/>
+          <Route exact path="/interlaken" component={Jungfrau}/>
+          <Route exact path="/meadows" component={Thor}/>
       </Switch>
     </BrowserRouter>
   );

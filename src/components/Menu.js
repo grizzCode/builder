@@ -51,7 +51,7 @@ export default function FadeMenu() {
           </StyledLink>
         </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
-          In-Progress
+          Current
         </StyledButton>
         <Menu
           id="progress-menu"
@@ -73,7 +73,7 @@ export default function FadeMenu() {
           </MenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
-          Completed Projects
+          Completed
         </StyledButton>
         <Menu
           id="fade-menu"
@@ -90,27 +90,27 @@ export default function FadeMenu() {
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/stagecoach">
-                Stagecoach Dr
+                Stagecoach
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/hitching_post">
-                Hitching Post Dr
+                Hitching Post
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
-            <StyledLink to="/royal_st">
-                Royal St
+            <StyledLink to="/sterlingwood">
+                Sterlingwood
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
-            <StyledLink to="/thorjussen">
-                Thorjussen
+            <StyledLink to="/meadows">
+                Meadows Passive House
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
-            <StyledLink to="/jungfrau">
-                Jungfrau Hill Rd
+            <StyledLink to="/interlaken">
+                Interlaken
             </StyledLink>
           </MenuItem>
           
@@ -127,7 +127,7 @@ export default function FadeMenu() {
         </StyledButton>
         <StyledButton>
           <StyledLink to="/contact_us">
-            Contact Us
+            Contact
           </StyledLink>
         </StyledButton>
         <Button>
@@ -158,7 +158,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 58%;
+  width: 50%;
   height: 44px;
   background-color: #181818;
   text-align: right;

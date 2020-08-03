@@ -121,7 +121,7 @@ export default function Thor() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>THORJUSSEN</StyledHeader>
+        <StyledHeader>MEADOWS PASSIVE HOUSE</StyledHeader>
         </HeaderDiv>
         
         <GalleryDiv>

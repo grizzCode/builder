@@ -184,7 +184,7 @@ export default function Jungfrau() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>JUNGFRAU HILL RD</StyledHeader>
+        <StyledHeader>INTERLAKEN</StyledHeader>
         </HeaderDiv>
         
         <GalleryDiv>
