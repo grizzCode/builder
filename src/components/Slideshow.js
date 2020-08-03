@@ -16,17 +16,17 @@ export default class SimpleSlider extends React.Component {
     };
 
     var images = {
-      first: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627590/T%20AND%20T%20BUILDERS/Home%20Page/6960Canyon_DR_72_qszkqq.jpg",
-      second: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627679/T%20AND%20T%20BUILDERS/Home%20Page/272JungfrauHillRD_68_wzzm3d.jpg",
-      third: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627668/T%20AND%20T%20BUILDERS/Home%20Page/7777StagecoachDR-31_jfc63v.jpg",
-      fourth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627598/T%20AND%20T%20BUILDERS/Home%20Page/_JAH9006-2_cpku4m.jpg",
-      fifth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627563/T%20AND%20T%20BUILDERS/Home%20Page/6960Canyon_DR_1_naqykx.jpg",
-      sixth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627645/T%20AND%20T%20BUILDERS/Home%20Page/7777StagecoachDR-29_kafdyd.jpg",
-      seventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627694/T%20AND%20T%20BUILDERS/Home%20Page/JAH-3862_hm9dgn.jpg",
-      eigthth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627682/T%20AND%20T%20BUILDERS/Home%20Page/272JungfrauHillRD_16_ivmpnn.jpg",
-      ninth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627708/T%20AND%20T%20BUILDERS/Home%20Page/Meadows_Dr_PC-4_qyrq2m.jpg",
-      tenth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627607/T%20AND%20T%20BUILDERS/Home%20Page/_JAH9059_lv9vl8.jpg",
-      eleventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1595627582/T%20AND%20T%20BUILDERS/Home%20Page/6960Canyon_DR_63_uascat.jpg",
+      first: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491105/T%20AND%20T%20BUILDERS/Home%20Page/Meadows_front_cropped_iooo5s.jpg",
+      second: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/stagecoach_rear_okynzh.jpg",
+      third: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491108/T%20AND%20T%20BUILDERS/Home%20Page/interlaken_2_hg2gt4.jpg",
+      fourth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_patio_vwg5us.jpg",
+      fifth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491109/T%20AND%20T%20BUILDERS/Home%20Page/meadows_rear_ibubr2.jpg",
+      sixth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491105/T%20AND%20T%20BUILDERS/Home%20Page/meadows_entry_ptolxi.jpg",
+      seventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_Entry_o58hcf.jpg",
+      eigthth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_stair_fqgpsm.jpg",
+      ninth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/Interlaken_1_ocsqyz.jpg",
+      tenth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491110/T%20AND%20T%20BUILDERS/Home%20Page/Sorensen_qjpiem.jpg",
+      eleventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/STagecoach_interior_2_rescuh.jpg",
     }
 
     const StyledImg = styled.img`

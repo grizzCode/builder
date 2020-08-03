@@ -60,12 +60,7 @@ export default function Review() {
               Travis is environmentally conscious, making decisions that improve the efficiency of the home after move in.
               Without question, I would hire Travis to build my next custom home.
             </StyledP>
-          </RightDiv>
-          <LeftDiv>
-            <StyledP>
-            Quality and attention to details would describe T&T Mountain Builders.  As a supplier I have worked with T&T for many years.  Travis is one of the most organized, and highest quality framers I have seen.  You will be impressed with the way he organizes, and also accomplishes things.  His knowledge of the building process is very evident in conversation as well as when you work together.  Life is easier when you work with someone like Travis.
-            </StyledP>
-          </LeftDiv>     
+          </RightDiv>   
         </StyledText>
       </StyledDiv>
     </>

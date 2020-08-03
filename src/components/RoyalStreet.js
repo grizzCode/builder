@@ -259,7 +259,7 @@ export default function Royal() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>ROYAL ST</StyledHeader>
+        <StyledHeader>STERLINGWOOD</StyledHeader>
         </HeaderDiv>
         
         <GalleryDiv>

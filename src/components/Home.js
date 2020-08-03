@@ -4,7 +4,7 @@ import Slider from './Slideshow'
 
 export default function Home() {
   return (
-    <section class="home"> 
+    <section className="home"> 
       <Slider/>
       <Menu/>
     </section>

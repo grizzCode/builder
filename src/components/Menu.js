@@ -84,23 +84,8 @@ export default function FadeMenu() {
           TransitionComponent={Fade}
         >
           <MenuItem onClick={handleClose2}>
-            <StyledLink to="/canyon_dr">
-                Canyon Dr
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
             <StyledLink to="/stagecoach">
                 Stagecoach
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/hitching_post">
-                Hitching Post
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/sterlingwood">
-                Sterlingwood
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
@@ -111,6 +96,26 @@ export default function FadeMenu() {
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/interlaken">
                 Interlaken
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/canyon_dr">
+                Canyon Dr
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/sterlingwood">
+                Sterlingwood
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/hitching_post">
+                Hitching Post
+            </StyledLink>
+          </MenuItem>
+          <MenuItem onClick={handleClose2}>
+            <StyledLink to="/maple">
+                Maple
             </StyledLink>
           </MenuItem>
           
@@ -129,6 +134,11 @@ export default function FadeMenu() {
           <StyledLink to="/contact_us">
             Contact
           </StyledLink>
+        </StyledButton>
+        <StyledButton>
+          <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
+            Client Login
+          </StyledA>
         </StyledButton>
         <Button>
           <a href="https://www.instagram.com/tandttravis/?hl=en">
@@ -158,7 +168,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 50%;
+  width: 58%;
   height: 44px;
   background-color: #181818;
   text-align: right;
@@ -176,6 +186,15 @@ const StyledLink = styled(Link)`
   font-size: 13px;
   margin-bottom: 3px;
 `
+const StyledA = styled.a`
+  color: inherit;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: Work Sans, sans-serif;
+  font-size: 13px;
+  margin-bottom: 3px;
+`
+
 const LogoImg = styled.img`
 margin-top: 0px;
   &:hover {
