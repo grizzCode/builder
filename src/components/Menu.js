@@ -10,6 +10,7 @@ import HouzzIcon from '../images/houzz.png'
 import InstagramIcon from '@material-ui/icons/Instagram';
 
 
+
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl2, setAnchorEl2] = React.useState(null);
@@ -45,11 +46,11 @@ export default function FadeMenu() {
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
-        <StyledButton>
-          <StyledLink to="/">
+        <StyledLink to="/">
+          <StyledButton>
             Home
-          </StyledLink>
-        </StyledButton>
+          </StyledButton>
+        </StyledLink>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           Current
         </StyledButton>
@@ -67,7 +68,7 @@ export default function FadeMenu() {
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose}>
-           <StyledLink to="/pineridge">
+            <StyledLink to="/pineridge">
               Pineridge
             </StyledLink>
           </MenuItem>
@@ -85,69 +86,68 @@ export default function FadeMenu() {
         >
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/stagecoach">
-                Stagecoach
+              Stagecoach
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/meadows">
-                Meadows Passive House
+              Meadows Passive House
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/interlaken">
-                Interlaken
+              Interlaken
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/canyon_dr">
-                Canyon Dr
+              Canyon Dr
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/sterlingwood">
-                Sterlingwood
+              Sterlingwood
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/hitching_post">
-                Hitching Post
+              Hitching Post
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/maple">
-                Maple
+              Maple
             </StyledLink>
           </MenuItem>
-          
         </Menu>
-        <StyledButton>
-          <StyledLink to="/about">
+        <StyledLink to="/about">
+          <StyledButton>
             About
-          </StyledLink>
         </StyledButton>
-        <StyledButton>
-          <StyledLink to="/testimonials">
+        </StyledLink>
+        <StyledLink to="/testimonials">
+          <StyledButton>
             Testimonials
-          </StyledLink>
         </StyledButton>
-        <StyledButton>
-          <StyledLink to="/contact_us">
+        </StyledLink>
+        <StyledLink to="/contact_us">
+          <StyledButton>
             Contact
-          </StyledLink>
         </StyledButton>
-        <StyledButton>
-          <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
+        </StyledLink>
+        <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
+          <StyledButton>
             Client Login
-          </StyledA>
         </StyledButton>
+        </StyledA>
         <Button>
           <a href="https://www.instagram.com/tandttravis/?hl=en">
-           <StyledInstagram />
+            <StyledInstagram />
           </a>
         </Button>
         <Button>
           <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
-            <LogoImg src={HouzzIcon} width="20" height="20"/>
+            <LogoImg src={HouzzIcon} width="20" height="20" />
           </a>
         </Button>
       </ThemeProvider>
@@ -156,19 +156,20 @@ export default function FadeMenu() {
 }
 
 
-
 const StyledButton = styled(Button)`
   &&& {
     color: white;
     margin-right: 13px;
-    margin-bottom: 3px;
     font-size: 13px;
-    
+    &:hover {
+      transition: transform .3s;
+      transform: scale(1.15);
+    }
   }
 `;
 
 const NavDiv = styled.div`
-  width: 58%;
+  width: 57%;
   height: 44px;
   background-color: #181818;
   text-align: right;
@@ -176,6 +177,7 @@ const NavDiv = styled.div`
   bottom: 0;
   right: 0;
   border-radius: 4px 0px 0px 0px;
+  overflow: hidden;
 `
 
 const StyledLink = styled(Link)`
@@ -185,6 +187,7 @@ const StyledLink = styled(Link)`
   font-family: Work Sans, sans-serif;
   font-size: 13px;
   margin-bottom: 3px;
+ 
 `
 const StyledA = styled.a`
   color: inherit;
@@ -196,7 +199,7 @@ const StyledA = styled.a`
 `
 
 const LogoImg = styled.img`
-margin-top: 0px;
+margin-top: 2px;
   &:hover {
     transition: transform .2s;
     transform: scale(1.4);
@@ -204,8 +207,10 @@ margin-top: 0px;
 `
 const StyledInstagram = styled(InstagramIcon)`
   color: white;
+  margin-top: 2px;
   &:hover {
     transition: transform .2s;
     transform: scale(1.4);
   }
 `
+
