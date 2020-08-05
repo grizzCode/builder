@@ -162,8 +162,8 @@ const StyledButton = styled(Button)`
     margin-right: 13px;
     font-size: 13px;
     &:hover {
-      transition: transform .3s;
-      transform: scale(1.15);
+      transition: transform .4s;
+      transform: scale(1.1);
     }
   }
 `;

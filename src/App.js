@@ -15,6 +15,7 @@ import Hitching from './components/HitchingPost';
 import Royal from './components/RoyalStreet';
 import Thor from './components/Thorjussen';
 import Jungfrau from './components/Jungfrau';
+import Maple from './components/Maple';
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
           <Route exact path="/sterlingwood" component={Royal}/>
           <Route exact path="/interlaken" component={Jungfrau}/>
           <Route exact path="/meadows" component={Thor}/>
+          <Route exact path="/maple" component={Maple}/>
       </Switch>
     </BrowserRouter>
   );

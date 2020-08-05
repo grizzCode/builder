@@ -57,7 +57,6 @@ const StyledLogo = styled.img`
   margin: auto;
 `
 
-
 const FooterCenter = styled.div`
  color: black;
  width: 20%;
