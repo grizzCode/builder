@@ -30,9 +30,10 @@ export default class SimpleSlider extends React.Component {
     }
 
     const StyledImg = styled.img`
-      height: 100%;
-      width: 100%;
+      height: auto;
+      width: 100vw;
       object-fit: cover;
+      overflow: hidden;
     `
 
     return (

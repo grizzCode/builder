@@ -30,7 +30,7 @@ function App() {
           <Route exact path="/pineridge" component={Pineridge}/>
           <Route exact path="/robertson" component={Robertson}/>
           <Route exact path="/testimonials" component={Testimonials}/>
-          <Route exact path="/canyon_dr" component={CanyonDr}/>
+          <Route exact path="/canyon" component={CanyonDr}/>
           <Route exact path="/stagecoach" component={Stagecoach}/>
           <Route exact path="/hitching_post" component={Hitching}/>
           <Route exact path="/sterlingwood" component={Royal}/>

@@ -229,7 +229,7 @@ export default function Stagecoach() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>STAGECOACH DR</StyledHeader>
+        <StyledHeader>STAGECOACH</StyledHeader>
         </HeaderDiv>
         
         <GalleryDiv>
@@ -243,7 +243,7 @@ export default function Stagecoach() {
 const GalleryDiv = styled.div`
   margin: auto;
   height: 80vh;
-  width: auto;
+  width: 78vw;
   overflow: hidden;
 
 `
@@ -251,8 +251,8 @@ const GalleryDiv = styled.div`
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  padding-left: 8px;
-  padding-right: 20px;
+  margin-top: 20%;
+  margin-left: 3%;
 `
 
 const StyledDiv = styled.div`
@@ -264,5 +264,5 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  width: 30%;
+  width: 18%;
 `

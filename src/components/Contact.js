@@ -1,7 +1,7 @@
 import React from 'react'
 import Menu from './Menu'
 import styled from 'styled-components'
-import Logo from '../images/logo.png'
+
 
 export default function About() {
 
@@ -12,7 +12,6 @@ export default function About() {
         <HeaderDiv>
         <StyledHeader>CONTACT US</StyledHeader>
         </HeaderDiv>
-        <StyledLogo src={Logo}/>
         <FooterCenter>
           <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
           <AddressDiv>
@@ -40,8 +39,7 @@ export default function About() {
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  padding-left: 8px;
-  padding-right: 20px;
+  margin-top: 20%;
 `
 
 const StyledDiv = styled.div`
@@ -53,21 +51,18 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  width: 20%;
   height: 600px;
+  width: 22%;
+  display: flex;
+  justify-content: center
 `
 
 const ContactP = styled.p`
-  font-size: 12px;
+  font-size: 14px;
 `
 const ContactA = styled.a`
   color: rgb(158, 203, 40);
-  font-size: 12px;
-`
-const StyledLogo = styled.img`
-  height: 300px;
-  width: auto;
-  margin: auto;
+  font-size: 14px;
 `
 
 const FooterCenter = styled.div`
@@ -85,13 +80,15 @@ const AddressDiv = styled.div`
 const AddressLabel = styled.h5`
   text-decoration: underline;
   margin: 0;
+  margin-bottom: 9px;
+  font-size: 16px;
 `
 
 const MapLink = styled.a`
   font-family: Work Sans, sans-serif;
   text-transform: uppercase;
   color: black;
-  font-size: 12px;
+  font-size: 14px;
   text-decoration: none;
   cursor: pointer;
   &:hover {

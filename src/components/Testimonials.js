@@ -70,7 +70,7 @@ export default function Review() {
 const StyledText = styled.div`
   margin: auto;
   height: 84vh;
-  width: auto;
+  width: 78%;
   margin-top: 30px;
   overflow: scroll;
 `
@@ -78,39 +78,49 @@ const StyledText = styled.div`
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  padding-left: 8px;
-  padding-right: 20px;
+  margin-top: 20%;
+  margin-left: 3%;
 `
 
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center
   width: 100%;
+  height: 1vm;
   margin-top: 30px;
 `
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  height: 600px;
+  width: 22%;
 `
 
 const StyledP = styled.p`
   font-family: inherit;
+  font-weight: 300;
   margin: 20px;
-  color: #424242;
+  color: inherit;
 `
 
 const LeftDiv = styled.div`
-  border: 2px solid grey;
+  color: black;
+  box-shadow: 4px 4px 8px grey;
+  background-color: #F9F8F4;
+  padding: 6px 10px 6px 10px;
   width: 65%;
   margin: 30px;
   margin-left: 60px;
+  border-radius: 4px;
 `
 
 const RightDiv = styled.div`
-    border: 2px solid grey;
+    padding: 6px 10px 6px 10px;
     width: 65%;
     margin: 30px;
     position: relative;
     left: 25%;
+    box-shadow: 4px 4px 8px grey;
+    background-color: #F9F8F4;
+    color: black;
+    border-radius: 4px;
 `

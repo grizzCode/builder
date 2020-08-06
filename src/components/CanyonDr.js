@@ -85,7 +85,7 @@ export default function Canyon() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>CANYON DR</StyledHeader>
+        <StyledHeader>CANYON</StyledHeader>
         </HeaderDiv>
         
         <GalleryDiv>
@@ -99,7 +99,7 @@ export default function Canyon() {
 const GalleryDiv = styled.div`
   margin: auto;
   height: 80vh;
-  width: auto;
+  width: 78vw;
   overflow: hidden;
 
 `
@@ -107,8 +107,8 @@ const GalleryDiv = styled.div`
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  padding-left: 8px;
-  padding-right: 20px;
+  margin-top: 20%;
+  margin-left: 3%;
 `
 
 const StyledDiv = styled.div`
@@ -120,5 +120,5 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  width: 30%;
+  width: 18%;
 `

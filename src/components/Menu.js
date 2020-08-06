@@ -100,8 +100,8 @@ export default function FadeMenu() {
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
-            <StyledLink to="/canyon_dr">
-              Canyon Dr
+            <StyledLink to="/canyon">
+              Canyon
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
@@ -116,7 +116,7 @@ export default function FadeMenu() {
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/maple">
-              Maple
+              Maple Passive House
             </StyledLink>
           </MenuItem>
         </Menu>
@@ -169,7 +169,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 57%;
+  width: 58%;
   height: 44px;
   background-color: #181818;
   text-align: right;
