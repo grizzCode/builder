@@ -1,28 +1,32 @@
 import React from 'react'
 import Menu from './Menu'
 import styled from 'styled-components'
+import Gallery from './Gallery'
 
-export default function Pineridge() {
+export default function CompletedProject(props) {
+
 
   return(
     <>
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>PINERIDGE</StyledHeader>
-        </HeaderDiv>
-        
-        <StyledImg src={require('../images/Pineridge_res.jpg')}/>
+        <StyledHeader>{props.name}</StyledHeader>
+        </HeaderDiv>    
+        <GalleryDiv>
+          <Gallery images={props.images}/>
+        </GalleryDiv>
       </StyledDiv>
     </>
   )
 }
 
-const StyledImg = styled.img`
+const GalleryDiv = styled.div`
   margin: auto;
   height: 80vh;
   width: 78vw;
   overflow: hidden;
+
 `
 
 const StyledHeader = styled.h1`
