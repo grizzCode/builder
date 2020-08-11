@@ -49,12 +49,6 @@ const HeaderDiv = styled.div`
   width: 22%;
 `
 
-const StyledP = styled.p`
-  font-family: inherit;
-  font-weight: 300;
-  margin: 20px;
-  color: inherit;
-`
 
 const StyledH4 = styled.h3`
   font-family: inherit;
