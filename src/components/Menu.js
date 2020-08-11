@@ -133,7 +133,7 @@ export default function FadeMenu() {
         <StyledLink to="/testimonials">
           <StyledButton>
             Testimonials
-        </StyledButton>
+          </StyledButton>
         </StyledLink>
         <StyledLink to="/contact_us">
           <StyledButton>

@@ -28,7 +28,7 @@ export default function CompletedProject(props) {
 const GalleryDiv = styled.div`
   margin: auto;
   height: 80vh;
-  width: 78vw;
+  width: 66vw;
   overflow: hidden;
 `
 
@@ -36,27 +36,34 @@ const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
   font-size: 36px;
-  margin-top: 10%;
-  margin-bottom: 10%;
+  margin-top: 4%;
+  margin-bottom: 8%;
   margin-left: 3%;
+  margin-right: 3%;
 `
 
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center
   width: 100%;
-  margin-top: 10px;
+  margin-top: 8px;
 `
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  width: 22%;
-  height: 90vh;
+  width: 28%;
+  height: 98vh;
   overflow: scroll;
 `
 const StyledList = styled.div`
   font-family: font-family: 'Montserrat', sans-serif;
   font-weight: 300;
   color: #111111;
-  margin: 11px;
+  margin: 6px;
+  > ul {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid lightgrey;
+    padding: 10px;
+  }
 `
