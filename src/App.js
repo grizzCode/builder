@@ -2,9 +2,9 @@ import React from 'react';
 import './App.css';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import Home from './components/Home'
-import Process from './components/Process'
 import About from './components/About'
-import Green_Building from './components/Green_Building';
+import Method from './components/Method';
+import Associates from './components/Associates';
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import CurrentProject from './components/Current_Project';
@@ -18,10 +18,9 @@ function App() {
     <BrowserRouter>
       <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/process" component={Process}/>
           <Route exact path="/about" component={About}/>
           <Route exact path="/contact_us" component={Contact}/>
-          <Route exact path="/green-building" component={Green_Building}/>
+          <Route exact path="/method" component={Method}/>
           <Route exact path="/pineridge">
             <CurrentProject name="PINERIDGE" image={PineridgeImg} />
           </Route>
@@ -29,26 +28,27 @@ function App() {
             <CurrentProject name="ROBERTSON" image={RobertsonImg} />
           </Route>
           <Route exact path="/testimonials" component={Testimonials}/>
+          <Route exact path="/associates" component={Associates}/>
           <Route exact path="/canyon">
-            <CompletedProject name="CANYON" images={canyon_images}/>
+            <CompletedProject name="PINERIDGE" images={pineridge_images} description={pineridge_description} specs={pineridge_specs}/>
           </Route>
           <Route exact path="/stagecoach">
-            <CompletedProject name="STAGECOACH" images={stagecoach_images}/>
+            <CompletedProject name="STAGECOACH" images={stagecoach_images} description={stagecoach_description} specs={stagecoach_specs}/>
           </Route>
           <Route exact path="/hitching_post">
-            <CompletedProject name="HITCHING POST" images={hitching_post_images}/>
+            <CompletedProject name="HITCHING POST" images={hitching_post_images} description={hitching_post_description} specs={hitching_post_specs}/>
           </Route>
           <Route exact path="/sterlingwood">
-            <CompletedProject name="STERLINGWOOD" images={sterlingwood_images}/>
+            <CompletedProject name="STERLINGWOOD" images={sterlingwood_images} description={sterlingwood_description} specs={sterlingwood_specs}/>
           </Route>
           <Route exact path="/interlaken">
-            <CompletedProject name="INTERLAKEN" images={interlaken_images}/>
+            <CompletedProject name="INTERLAKEN" images={interlaken_images} description={interlaken_description} specs={interlaken_specs}/>
           </Route>
           <Route exact path="/meadows">
-            <CompletedProject name="MEADOWS PASSIVE HOUSE" images={meadows_images}/>
+            <CompletedProject name="MEADOWS PASSIVE HOUSE" images={meadows_images} description={meadows_description} specs={meadows_specs}/>
           </Route>
           <Route exact path="/maple">
-            <CompletedProject name="MAPLE PASSIVE HOUSE" images={maple_images}/>
+            <CompletedProject name="MAPLE PASSIVE HOUSE" images={maple_images} description={maple_description} specs={maple_specs}/>
           </Route>
       </Switch>
     </BrowserRouter>
@@ -58,8 +58,28 @@ function App() {
 export default App;
 
 
+const pineridge_description = "The was our first of many projects with Park City Design+Build . Dift Design was responsible for this plan, with Klima Architecture now being the other part of the company previously known as PCDB."
 
-const canyon_images = [
+const pineridge_specs = (
+<>
+<p>Architect: Park City Design+Build: Andrew Foster (now Drift Design)</p>
+<a href="https://www.driftdesignstudio.co/">https://www.driftdesignstudio.co/</a>
+<p>Interior design by clients and T&T</p>
+<ul>
+  <p>3000 SF</p>
+  <p>Completed February 2018</p>
+  <p>17 month timeline including a 4-1/2 month winter shutdown</p>
+  <p>Zola European windows</p>
+  <p>Mitsubishi ducted heat pump system</p>
+  <p>Extensive board form concrete, performed in-house </p>
+  <p>Pine Tar siding finish</p>
+  <p>Solar PV system</p>
+  <p>2 x 8 Double stud wall with 3” continuous exterior insulation</p>
+</ul>
+</>
+)
+
+const pineridge_images = [
   {
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595522837/T%20AND%20T%20BUILDERS/Canyon%20Dr/6960Canyon_DR_68_rxsh8w.jpg',
   },
@@ -133,6 +153,27 @@ const canyon_images = [
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595522813/T%20AND%20T%20BUILDERS/Canyon%20Dr/6960Canyon_DR_7_apcco3.jpg',
   },
 ];
+
+const stagecoach_description = "This project was built for a wonderful couple and their German Shepherd."
+
+const stagecoach_specs = (
+<>
+<p>Architect: Park City Design+Build : Chris Price</p>
+<a href="http://klimaarchitecture.com/">http://klimaarchitecture.com</a>
+<p>Interior design by clients and T&T</p>
+<ul>
+  <p>3006 SF House</p>
+  <p>936 sf garage</p>
+  <p>Main level living</p>
+  <p>Wine room, utilizing only the earth for conditioning</p>
+  <p>This space maintains 50 degrees year round!</p>
+  <p>12” double Stud wall construction</p>
+  <p>Zola European windows</p>
+  <p>Solar PV system</p>
+  <p>Completed February 2020 (17 month timeline, including a 4 month winter shutdown)</p>
+</ul>
+</>
+)
 
 const stagecoach_images = [
   {
@@ -353,6 +394,24 @@ const stagecoach_images = [
   },
 ];
 
+const hitching_post_description = "These clients have become great friends!"
+
+const hitching_post_specs = (
+  <>
+  <p>Architect: Brach Design </p>
+  <a href="https://www.brachdesign.com/">https://www.brachdesign.com/</a>
+  <p>Interior design by clients and T&T</p>
+  <ul>
+    <p>3000 SF</p>
+    <p>Completed April 2016</p>
+    <p>11 month construction timeline</p>
+    <p>2x6 wall assembly with 3” exterior foam</p>
+    <p>Alpen High Performance Windows</p>
+    <p>Hydronic baseboard heating  / DHW combi system</p>
+  </ul>
+  </>
+  )
+
 const hitching_post_images = [
   {
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595883232/T%20AND%20T%20BUILDERS/Hitching%20Post%20Dr/_JAH9073_swwwns.jpg',
@@ -514,6 +573,19 @@ const hitching_post_images = [
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595883329/T%20AND%20T%20BUILDERS/Hitching%20Post%20Dr/_JAH8893_czifwj.jpg',
   },
 ];
+
+const sterlingwood_description = "Floor plan revisions and layout by T&T, interior design by Alder & Tweed"
+
+const sterlingwood_specs = (
+<>
+  <p>This was a 3000 SF condo remodel for friends that happen to live out of the country. </p> 
+  <p> The online collaboration was a another great example of clients trusting in us to see their vision (or dreams!) through to the end.</p>
+  <p>We completely “gutted” the interior to the studs, stripped all of the mechanicals and started over. Where this may 
+    seem wasteful, the project was built in the early 80’s, and built poorly at that. The upper level was hot in 
+    the summer, the lower level was an ice box in the winter, and they never had enough hot water. We delivered on 
+    redesigning these systems and other to create another comfortable / healthy project that they love.</p>
+</>
+)
 
 const sterlingwood_images = [
   {
@@ -764,6 +836,23 @@ const sterlingwood_images = [
   },
 ];
 
+const interlaken_description = "This project was built for a friend on the site of an old cabin that was built in the 70’s."
+
+const interlaken_specs = (
+  <>
+  <p>Architect: Park City Design+Build: Andrew Foster (now Drift Design)</p>
+  <a href="https://www.driftdesignstudio.co/">https://www.driftdesignstudio.co/</a>
+  <ul>
+    <p>2154 SF House</p>
+    <p>1700 SF Garage!</p>
+    <p>809 SF of deck space to maximize outdoor living!</p>
+    <p>2 x 8 double stud wall construction</p>
+    <p>Completed January 2019. (9 month construction process)</p>
+  </ul>
+  </>
+  )
+
+
 const interlaken_images = [
   {
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595956726/T%20AND%20T%20BUILDERS/Jungfrau%20Hill%20Rd/272JungfrauHillRD_66_krdupe.jpg',
@@ -938,6 +1027,29 @@ const interlaken_images = [
   },
 ];
 
+const meadows_description = "This is the first fully certified Passive House in the city of Park City. (the first in Summit County is owned by T&T!) This project was constructed for a family from Northern California who is conscious about their overall environmental impact."
+
+const meadows_specs = (
+  <>
+  <p>Architect: Park City Design+Build : Chris Price</p>
+  <a href="http://klimaarchitecture.com/">http://klimaarchitecture.com</a>
+  <p>Interior design by J2 , Julie Chahine</p>
+  <p>This project team was a great example of enjoyable building experience!</p>
+  <ul>
+    <p>5000 SF</p>
+    <p>12” double stud wall, with 3” continuous exterior insulation </p>
+    <p>Lumos solar canopies over decks, with additional solar PV on upper roof</p>
+    <p>All electric, truly net zero!</p>
+    <p>Heat pump heating and cooling</p>
+    <p>Zehnder HRV ventilation system</p>
+    <p>Glo European windows</p>
+    <p>Sanden heat pump water heater (first in Utah)</p>
+    <p>Delta Millworks Sho-sugi-ban siding</p>
+    <p>Completed August 2019 (15 month construction process)</p>
+  </ul>
+  </>
+  )
+
 const meadows_images = [
   {
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595907375/T%20AND%20T%20BUILDERS/Thorjussen/Meadows_Dr_PC-9_dbnjr8.jpg',
@@ -1048,6 +1160,26 @@ const meadows_images = [
     original: 'https://res.cloudinary.com/grizzcode-llc/image/upload/v1595907464/T%20AND%20T%20BUILDERS/Thorjussen/Meadows_Dr_PC-30_ejssfs.jpg',
   },
 ];
+
+const maple_description = "This was the first certified passive house in Summit county, built and occupied by Travis and Tammy of T and T Mountain Builders."
+
+const maple_specs = (
+  <>
+  <p>Designed by Travis and Tammy</p>
+  <p>Passive house consulting by Dave Brach</p>
+  <ul>
+    <p>Completed November 2014</p>
+    <p>5 month construction timeline (whew!)</p>
+    <p>2350 SF</p>
+    <p>All electric</p>
+    <p>Solar Thermal domestic hot water</p>
+    <p>Solar PV</p>
+    <p>Net Zero</p>
+    <p>Zola European windows</p>
+    <p>Zehnder HRV ventilation</p>
+  </ul>
+  </>
+  )
 
 const maple_images = [
   {

@@ -101,7 +101,7 @@ export default function FadeMenu() {
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/canyon">
-              Canyon
+              Pineridge
             </StyledLink>
           </MenuItem>
           <MenuItem onClick={handleClose2}>
@@ -116,7 +116,7 @@ export default function FadeMenu() {
           </MenuItem>
           <MenuItem onClick={handleClose2}>
             <StyledLink to="/maple">
-              Maple Passive House
+              Maple Passive Haus
             </StyledLink>
           </MenuItem>
         </Menu>
@@ -125,6 +125,11 @@ export default function FadeMenu() {
             About
         </StyledButton>
         </StyledLink>
+        {/* <StyledLink to="/method">
+          <StyledButton>
+            Method
+        </StyledButton>
+        </StyledLink> */}
         <StyledLink to="/testimonials">
           <StyledButton>
             Testimonials
