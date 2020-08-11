@@ -49,7 +49,7 @@ const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
   margin-top: 20%;
-  margin-left: 3%;
+  margin-left: 10%;
 `
 
 const StyledDiv = styled.div`
@@ -62,7 +62,7 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
-  width: 22%;
+  width: 28%;
   
 `
 

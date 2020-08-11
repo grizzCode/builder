@@ -36,7 +36,7 @@ export default function FadeMenu() {
       type: 'dark'
     },
     typography: {
-      fontFamily: ['Work Sans', 'sans-serif'],
+      fontFamily: ['Work Sans', 'sans-serif !important'],
       fontWeight: 300,
     }
   }

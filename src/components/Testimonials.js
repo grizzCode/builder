@@ -79,7 +79,7 @@ const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
   margin-top: 20%;
-  margin-left: 3%;
+  margin-left: 10%;
 `
 
 const StyledDiv = styled.div`

@@ -10,7 +10,7 @@ export default function About() {
       <Menu/>
       <StyledDiv>
         <HeaderDiv>
-        <StyledHeader>CONTACT US</StyledHeader>
+        <StyledHeader>CONTACT</StyledHeader>
         </HeaderDiv>
         <FooterCenter>
           <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
@@ -40,6 +40,7 @@ const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
   margin-top: 20%;
+  margin-left: 10%
 `
 
 const StyledDiv = styled.div`
@@ -53,8 +54,7 @@ const HeaderDiv = styled.div`
   border-right: 2px solid black;
   height: 600px;
   width: 22%;
-  display: flex;
-  justify-content: center
+
 `
 
 const ContactP = styled.p`
