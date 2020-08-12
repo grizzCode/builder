@@ -192,6 +192,7 @@ const StyledLink = styled(Link)`
   font-family: Work Sans, sans-serif;
   font-size: 13px;
   margin-bottom: 3px;
+  width: 100%;
  
 `
 const StyledA = styled.a`

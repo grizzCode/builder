@@ -57,6 +57,7 @@ const StyledDiv = styled.div`
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
   width: 22%;
+  height: 98vh;
 `
 
 const StyledH4 = styled.h3`

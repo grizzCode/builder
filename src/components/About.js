@@ -63,7 +63,7 @@ const StyledDiv = styled.div`
 const HeaderDiv = styled.div`
   border-right: 2px solid black;
   width: 28%;
-  
+  height: 94vh;
 `
 
 const StyledP = styled.p`

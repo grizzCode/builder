@@ -54,7 +54,7 @@ const HeaderDiv = styled.div`
   border-right: 2px solid black;
   height: 600px;
   width: 22%;
-
+  height: 94vh;
 `
 
 const ContactP = styled.p`
