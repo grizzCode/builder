@@ -20,7 +20,7 @@ function App() {
       <Switch>
           <Route exact path="/" component={Home}/>
           <Route exact path="/about" component={About}/>
-          <Route exact path="/contact_us" component={Contact}/>
+          <Route exact path="/contact" component={Contact}/>
           <Route exact path="/method" component={Method}/>
           <Route exact path="/pineridge">
             <CurrentProject name="PINERIDGE" image={PineridgeImg} />

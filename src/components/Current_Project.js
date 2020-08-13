@@ -44,3 +44,4 @@ const HeaderDiv = styled.div`
   border-right: 2px solid black;
   width: 18%;
 `
+

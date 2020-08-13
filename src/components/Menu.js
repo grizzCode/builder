@@ -5,7 +5,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Fade from '@material-ui/core/Fade';
 import styled from "styled-components";
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { Link } from 'react-router-dom'
+import { Link as RouterLink } from 'react-router-dom'
 import HouzzIcon from '../images/houzz.png'
 import InstagramIcon from '@material-ui/icons/Instagram';
 
@@ -46,11 +46,9 @@ export default function FadeMenu() {
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
-        <StyledLink to="/">
-          <StyledButton>
-            Home
-          </StyledButton>
-        </StyledLink>
+        <StyledButton to="/" component={RouterLink}>
+          Home
+        </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           Current
         </StyledButton>
@@ -62,16 +60,12 @@ export default function FadeMenu() {
           onClose={handleClose}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose}>
-            <StyledLink to="/robertson">
-              Robertson
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose}>
-            <StyledLink to="/pineridge">
-              Pineridge
-            </StyledLink>
-          </MenuItem>
+          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
+            Robertson
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/pineridge">
+            Pineridge
+          </StyledMenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed
@@ -84,66 +78,47 @@ export default function FadeMenu() {
           onClose={handleClose2}
           TransitionComponent={Fade}
         >
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/stagecoach">
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/stagecoach">
               Stagecoach
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/meadows">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/meadows">
               Meadows Passive House
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/interlaken">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/interlaken">
               Interlaken
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/canyon">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/canyon">
               Pineridge
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/sterlingwood">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/sterlingwood">
               Sterlingwood
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/hitching_post">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/hitching_post">
               Hitching Post
-            </StyledLink>
-          </MenuItem>
-          <MenuItem onClick={handleClose2}>
-            <StyledLink to="/maple">
+          </StyledMenuItem>
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/maple">
               Maple Passive Haus
-            </StyledLink>
-          </MenuItem>
+          </StyledMenuItem>
         </Menu>
-        <StyledLink to="/about">
-          <StyledButton>
+        <StyledButton component={RouterLink} to="/about">
             About
         </StyledButton>
-        </StyledLink>
+        {/* </StyledLink> */}
         {/* <StyledLink to="/method">
           <StyledButton>
             Method
         </StyledButton>
         </StyledLink> */}
-        <StyledLink to="/testimonials">
-          <StyledButton>
-            Testimonials
-          </StyledButton>
-        </StyledLink>
-        <StyledLink to="/contact_us">
-          <StyledButton>
-            Contact
+        <StyledButton component={RouterLink} to="/testimonials">
+          Testimonials
         </StyledButton>
-        </StyledLink>
+        <StyledButton component={RouterLink} to="/contact">
+          Contact
+        </StyledButton>
         <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
           <StyledButton>
             Client Login
-        </StyledButton>
+          </StyledButton>
         </StyledA>
         <Button>
           <a href="https://www.instagram.com/tandttravis/?hl=en">
@@ -185,12 +160,12 @@ const NavDiv = styled.div`
   overflow: hidden;
 `
 
-const StyledLink = styled(Link)`
+const StyledMenuItem = styled(MenuItem)`
   color: inherit;
   text-transform: uppercase;
   text-decoration: none;
   font-family: Work Sans, sans-serif;
-  font-size: 13px;
+  font-size: 13px !important;
   margin-bottom: 3px;
   width: 100%;
 `
