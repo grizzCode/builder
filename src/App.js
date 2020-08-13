@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
 import Method from './components/Method';
@@ -11,6 +11,7 @@ import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Completed_Project';
 import PineridgeImg from './images/Pineridge_res.jpg'
 import RobertsonImg from './images/Robertson_res.jpg'
+
 
 function App() {
 
@@ -49,6 +50,9 @@ function App() {
           </Route>
           <Route exact path="/maple">
             <CompletedProject name="MAPLE PASSIVE HOUSE" images={maple_images} description={maple_description} specs={maple_specs}/>
+          </Route>
+          <Route exact path="*">
+            <Redirect to="/"/>
           </Route>
       </Switch>
     </BrowserRouter>

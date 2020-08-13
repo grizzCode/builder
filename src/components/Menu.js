@@ -193,7 +193,6 @@ const StyledLink = styled(Link)`
   font-size: 13px;
   margin-bottom: 3px;
   width: 100%;
- 
 `
 const StyledA = styled.a`
   color: inherit;
