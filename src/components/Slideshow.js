@@ -2,7 +2,7 @@ import React from "react";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
-import styled from 'styled-components'
+import SliderImg from './SliderImg'
  
 export default class SimpleSlider extends React.Component {
   render() {
@@ -15,64 +15,30 @@ export default class SimpleSlider extends React.Component {
       slidesToScroll: 1
     };
 
-    var images = {
-      first: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491105/T%20AND%20T%20BUILDERS/Home%20Page/Meadows_front_cropped_iooo5s.jpg",
-      second: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/stagecoach_rear_okynzh.jpg",
-      third: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491108/T%20AND%20T%20BUILDERS/Home%20Page/interlaken_2_hg2gt4.jpg",
-      fourth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_patio_vwg5us.jpg",
-      fifth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491109/T%20AND%20T%20BUILDERS/Home%20Page/meadows_rear_ibubr2.jpg",
-      sixth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491105/T%20AND%20T%20BUILDERS/Home%20Page/meadows_entry_ptolxi.jpg",
-      seventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_Entry_o58hcf.jpg",
-      eigthth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491099/T%20AND%20T%20BUILDERS/Home%20Page/LaRoche_stair_fqgpsm.jpg",
-      ninth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/Interlaken_1_ocsqyz.jpg",
-      tenth: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491110/T%20AND%20T%20BUILDERS/Home%20Page/Sorensen_qjpiem.jpg",
-      eleventh: "https://res.cloudinary.com/grizzcode-llc/image/upload/v1596491112/T%20AND%20T%20BUILDERS/Home%20Page/STagecoach_interior_2_rescuh.jpg",
-    }
+    var images = [
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357241/T%20AND%20T%20BUILDERS/interlaken_2_hg2gt4_e73mk2_dgztcx.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357254/T%20AND%20T%20BUILDERS/stagecoach_rear_okynzh_s8liwq.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357240/T%20AND%20T%20BUILDERS/Interlaken_1_ocsqyz_e6arbd.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357234/T%20AND%20T%20BUILDERS/LaRoche_patio_vwg5us_he6jhq.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357260/T%20AND%20T%20BUILDERS/meadows_rear_ibubr2_sozzpx.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357241/T%20AND%20T%20BUILDERS/meadows_entry_ptolxi_lp1sjf.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357235/T%20AND%20T%20BUILDERS/LaRoche_Entry_o58hcf_nytier.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357231/T%20AND%20T%20BUILDERS/LaRoche_stair_fqgpsm_enuqjh.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357233/T%20AND%20T%20BUILDERS/LaRoche_Front_elevation_yar0lu_ls8hzf.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357247/T%20AND%20T%20BUILDERS/Sorensen_qjpiem_eo74gh.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357260/T%20AND%20T%20BUILDERS/Sterlingwood_fireplace_gmkbyr_ux85jb.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357258/T%20AND%20T%20BUILDERS/Stagecoach_front_uxp1gv_wqjk2f.jpg",
+    ]
 
-    const StyledImg = styled.img`
-      height: auto;
-      width: 100vw;
-      object-fit: cover;
-      overflow: hidden;
-    `
-
+  
     return (
       <Slider {...settings}>
+        {images.map((image) => (
         <div>
-          <StyledImg src={images.third}/>
-        </div>  
-        <div>
-          <StyledImg src={images.first}/>
-        </div>  
-        <div>
-          <StyledImg src={images.second}/>
-        </div>  
-        <div>
-          <StyledImg src={images.fourth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.fifth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.sixth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.seventh}/>
-        </div>  
-        <div>
-          <StyledImg src={images.eigthth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.ninth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.tenth}/>
-        </div>  
-        <div>
-          <StyledImg src={images.eleventh}/>
-        </div>  
+          <SliderImg image={image}/>
+         </div>  
+        ))}
       </Slider>
     );
   }
 }
-
