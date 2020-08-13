@@ -39,8 +39,16 @@ export default function About() {
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  margin-top: 20%;
-  margin-left: 10%
+  font-size: 36px;
+  margin-top: 30%;
+  margin-bottom: 8%;
+  margin-left: 0;
+  margin-right: 3%;
+  background-color: #181818;
+  color: white;
+  padding: 12px;
+  width: 95%;
+  border-radius: 0px 4px 4px 0px;
 `
 
 const StyledDiv = styled.div`
@@ -51,7 +59,6 @@ const StyledDiv = styled.div`
 `
 
 const HeaderDiv = styled.div`
-  border-right: 2px solid black;
   height: 600px;
   width: 22%;
   height: 94vh;

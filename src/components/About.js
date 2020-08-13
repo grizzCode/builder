@@ -41,15 +41,23 @@ export default function About() {
 const StyledText = styled.div`
   margin: auto;
   width: auto;
-  margin-top: 30px;
+  margin-top: 2%;
   font-size: 16px;
 `
 
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  margin-top: 20%;
-  margin-left: 10%;
+  font-size: 36px;
+  margin-top: 29.6%;
+  margin-bottom: 8%;
+  margin-left: 0;
+  margin-right: 3%;
+  background-color: #181818;
+  color: white;
+  padding: 12px;
+  width: 95%;
+  border-radius: 0px 4px 4px 0px;
 `
 
 const StyledDiv = styled.div`
@@ -61,7 +69,6 @@ const StyledDiv = styled.div`
 `
 
 const HeaderDiv = styled.div`
-  border-right: 2px solid black;
   width: 28%;
   height: 94vh;
 `
@@ -81,14 +88,14 @@ const ImgDiv = styled.div`
 const LogoImg1 = styled.img`
   height: 160px;
   width: auto;
-  margin-top: 40px;
-  margin-bottom: 60px;
+  margin-top: 2%;
+  margin-bottom: 8%;
 `
 const ContentDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100%;
+  width: 98%;
 
 `
 const ButtonDiv = styled.div`

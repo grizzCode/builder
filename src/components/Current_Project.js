@@ -21,16 +21,25 @@ export default function CurrentProject(props) {
 
 const StyledImg = styled.img`
   margin: auto;
+  margin-top: 0.6%;
   height: 80vh;
-  width: 78vw;
+  width: 74vw;
   overflow: hidden;
 `
 
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
-  margin-top: 20%;
-  margin-left: 3%;
+  font-size: 36px;
+  margin-top: 22%;
+  margin-bottom: 8%;
+  margin-left: 0;
+  margin-right: 3%;
+  background-color: #181818;
+  color: white;
+  padding: 12px;
+  width: 100%;
+  border-radius: 0px 4px 4px 0px;
 `
 
 const StyledDiv = styled.div`
@@ -41,7 +50,7 @@ const StyledDiv = styled.div`
 `
 
 const HeaderDiv = styled.div`
-  border-right: 2px solid black;
-  width: 18%;
+  width: 21%;
+  margin-top: 2%;
 `
 
