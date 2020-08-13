@@ -156,7 +156,6 @@ const NavDiv = styled.div`
   position: fixed;
   bottom: 0;
   right: 0;
-  border-radius: 4px 0px 0px 0px;
   overflow: hidden;
 `
 

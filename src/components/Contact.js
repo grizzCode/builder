@@ -12,15 +12,9 @@ export default function About() {
         <HeaderDiv>
         <StyledHeader>CONTACT</StyledHeader>
         </HeaderDiv>
-        <FooterCenter>
-          <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
+        <DivCenter>
           <AddressDiv>
-            <AddressLabel>Office</AddressLabel>
-            <MapLink href="https://www.google.com/maps/place/4376+N+Forestdale+Dr+%2312,+Park+City,+UT+84098/@40.693385,-111.467832,17z/data=!3m1!4b1!4m5!3m4!1s0x875212d0501c7f27:0xfe41af1d32eb6996!8m2!3d40.693385!4d-111.4656433">
-              4376 Forestdale Dr <br/>
-              Unit #12<br/>
-              Park City, UT 84098 <br/>
-            </MapLink>
+            <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
           </AddressDiv>
           <AddressDiv>
             <AddressLabel>Mailing</AddressLabel>
@@ -29,7 +23,11 @@ export default function About() {
               Park City, Utah 84098
             </ContactP>
           </AddressDiv>
-        </FooterCenter>
+          <AddressDiv>
+            <AddressLabel>Office</AddressLabel>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.118626322351!2d-111.46783198459562!3d40.69338497933395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875212d0501c7f27%3A0xfe41af1d32eb6996!2s4376%20N%20Forestdale%20Dr%20%2312%2C%20Park%20City%2C%20UT%2084098!5e0!3m2!1sen!2sus!4v1597360190248!5m2!1sen!2sus" width="600" height="400" frameborder="0"  allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </AddressDiv>
+        </DivCenter>
       </StyledDiv>
     </>
   )
@@ -40,7 +38,7 @@ const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
   font-size: 36px;
-  margin-top: 30%;
+  margin-top: 39.5%;
   margin-bottom: 8%;
   margin-left: 0;
   margin-right: 3%;
@@ -48,14 +46,13 @@ const StyledHeader = styled.h1`
   color: white;
   padding: 12px;
   width: 95%;
-  border-radius: 0px 4px 4px 0px;
 `
 
 const StyledDiv = styled.div`
   display: flex;
   justify-content: center
   width: 100%;
-  margin-top: 30px;
+
 `
 
 const HeaderDiv = styled.div`
@@ -69,19 +66,24 @@ const ContactP = styled.p`
 `
 const ContactA = styled.a`
   color: rgb(158, 203, 40);
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 30px;
+  width: 100%;
 `
 
-const FooterCenter = styled.div`
+const DivCenter = styled.div`
  color: black;
- width: 20%;
  font-family: Work Sans, sans-serif;
  text-transform: uppercase;
  margin: auto;
+ margin-left: 20%;
+ display: flex;
+ flex-wrap: wrap;
 `
 
 const AddressDiv = styled.div`
-  margin-top: 40px;
+  width: 45%;
+  margin-top: 60px;
 `
 
 const AddressLabel = styled.h5`
@@ -89,16 +91,4 @@ const AddressLabel = styled.h5`
   margin: 0;
   margin-bottom: 9px;
   font-size: 16px;
-`
-
-const MapLink = styled.a`
-  font-family: Work Sans, sans-serif;
-  text-transform: uppercase;
-  color: black;
-  font-size: 14px;
-  text-decoration: none;
-  cursor: pointer;
-  &:hover {
-    text-decoration: underline;
-  }
 `
