@@ -149,7 +149,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 58%;
+  width: 57.6%;
   height: 44px;
   background-color: #181818;
   text-align: right;
@@ -157,7 +157,7 @@ const NavDiv = styled.div`
   bottom: 0;
   right: 0;
   overflow: hidden;
-  border-radius: 4px 0px 0px 0px;
+  // border-radius: 4px 0px 0px 0px;
 `
 
 const StyledMenuItem = styled(MenuItem)`

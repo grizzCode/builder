@@ -26,7 +26,7 @@ export default class SimpleSlider extends React.Component {
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357231/T%20AND%20T%20BUILDERS/LaRoche_stair_fqgpsm_enuqjh.jpg",
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357233/T%20AND%20T%20BUILDERS/LaRoche_Front_elevation_yar0lu_ls8hzf.jpg",
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357247/T%20AND%20T%20BUILDERS/Sorensen_qjpiem_eo74gh.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357260/T%20AND%20T%20BUILDERS/Sterlingwood_fireplace_gmkbyr_ux85jb.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357254/T%20AND%20T%20BUILDERS/STagecoach_interior_2_rescuh_pvenzo.jpg",
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357258/T%20AND%20T%20BUILDERS/Stagecoach_front_uxp1gv_wqjk2f.jpg",
     ]
 
