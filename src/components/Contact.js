@@ -45,7 +45,7 @@ const StyledHeader = styled.h1`
   background-color: #181818;
   color: white;
   padding: 12px;
-  width: 95%;
+  width: 100%;
 `
 
 const StyledDiv = styled.div`
@@ -57,7 +57,7 @@ const StyledDiv = styled.div`
 
 const HeaderDiv = styled.div`
   height: 600px;
-  width: 22%;
+  width: 26%;
   height: 94vh;
 `
 

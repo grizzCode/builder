@@ -24,6 +24,5 @@ const StyledLogo = styled.img`
   position: fixed;
   top: 0;
   left: 0;
-  border-radius: 0px 0px 4px 0px;
   z-index: 2;
 `

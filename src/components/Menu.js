@@ -157,6 +157,7 @@ const NavDiv = styled.div`
   bottom: 0;
   right: 0;
   overflow: hidden;
+  border-radius: 4px 0px 0px 0px;
 `
 
 const StyledMenuItem = styled(MenuItem)`

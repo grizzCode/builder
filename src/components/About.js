@@ -57,7 +57,6 @@ const StyledHeader = styled.h1`
   color: white;
   padding: 12px;
   width: 95%;
-  border-radius: 0px 4px 4px 0px;
 `
 
 const StyledDiv = styled.div`
