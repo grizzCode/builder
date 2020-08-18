@@ -149,7 +149,7 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 57.6%;
+  width: 57.8%;
   height: 44px;
   background-color: #181818;
   text-align: right;

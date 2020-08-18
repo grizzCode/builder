@@ -4,14 +4,17 @@ import Slider from './Slideshow'
 import Logo from '../images/logo.png'
 import styled from "styled-components";
 
+
 export default function Home() {
 
   return (
+    <>
     <section className="home"> 
       <StyledLogo src={Logo}/>
       <Slider/>
       <Menu/>
     </section>
+    </>
   )
 }
 
