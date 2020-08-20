@@ -179,11 +179,6 @@ export default function MobileMenu() {
   );
 }
 
-const StyledMenuIcon = styled(MenuOpenIcon)`
-  margin: auto;
-  margin-top: 5px;
-  font-size: 56px;
-`
 
 const NavDiv = styled.div`
   width: auto;
