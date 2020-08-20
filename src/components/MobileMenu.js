@@ -56,7 +56,7 @@ export default function MobileMenu() {
     <ThemeProvider theme={themeConfig}>
       <NavDiv>
         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick3}>
-          <StyledMenuIcon />
+          <MenuOpenIcon style={{ fontSize: 40 }}/>
         </Button>
         <Menu
           id="simple-menu-3"
@@ -182,18 +182,18 @@ export default function MobileMenu() {
 const StyledMenuIcon = styled(MenuOpenIcon)`
   margin: auto;
   margin-top: 5px;
-  font-size: 36px;
+  font-size: 56px;
 `
 
 const NavDiv = styled.div`
   width: auto;
   z-index: 999;
-  height: 44px;
+  height: auto;
   background-color: #181818;
   text-align: right;
   position: fixed;
-  right: 0;
-  bottom: 0;
+  right: 10px;
+  bottom: 10px;
   -webkit-backface-visibility: hidden;
 `
 
@@ -202,7 +202,7 @@ const StyledMenuItem = styled(MenuItem)`
   text-transform: uppercase;
   text-decoration: none;
   font-family: Work Sans, sans-serif;
-  font-size: 13px !important;
+  font-size: 15px !important;
   margin-bottom: 3px;
   width: 100%;
 `
@@ -211,7 +211,7 @@ const StyledA = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   font-family: Work Sans, sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 3px;
 `
 

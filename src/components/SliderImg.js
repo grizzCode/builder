@@ -4,12 +4,15 @@ import styled from 'styled-components'
 export default function Image(props) {
   
   const StyledImg = styled.div`    
-    background-image: url(${props.image});
+    background: url(${props.image}) center center no-repeat;
     background-size: cover;
     background-repeat: no-repeat,
     background-position: center center;
     height: 100vh;
-    width: auto;
+    z-index: -1;
+    @media (max-width: 1224px) {
+      background-size: contain;
+    }
 `
 
   return(

@@ -4,6 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SliderImg from './SliderImg'
  
+
 export default class SimpleSlider extends React.Component {
   render() {
     var settings = {
@@ -34,9 +35,7 @@ export default class SimpleSlider extends React.Component {
     return (
       <Slider {...settings}>
         {images.map((image) => (
-        <div>
-          <SliderImg image={image} />
-         </div>  
+          <SliderImg image={image} /> 
         ))}
       </Slider>
     );
