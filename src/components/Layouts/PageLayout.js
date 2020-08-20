@@ -1,8 +1,8 @@
 import React from 'react'
-import Menu from './Menu'
+import Menu from '../Menu'
 import styled from 'styled-components'
-import MobileMenu from './MobileMenu'
-import { useWindowDimensions } from './Providers/WindowProvider'
+import MobileMenu from '../MobileMenu'
+import { useWindowDimensions } from '../Providers/WindowProvider'
 
 export default function PageLayout(props) {
   const { width } = useWindowDimensions()
@@ -15,6 +15,10 @@ export default function PageLayout(props) {
       <StyledDiv>
         <HeaderDiv>
           <StyledHeader>{props.name}</StyledHeader>
+          <StyledList>
+            <StyledList>{props.description}</StyledList>
+            <StyledList>{props.specs}</StyledList>
+          </StyledList>    
         </HeaderDiv>
         <ContentDiv> 
           {props.content}
@@ -41,6 +45,7 @@ export default function PageLayout(props) {
     return ( width > breakpoint ? renderDesktop() : renderMobile())   
 }
 
+// _____________________DESKTOP_________________________________
 const StyledHeader = styled.h1`
   font-family: inherit;
   font-weight: 300;
@@ -54,6 +59,13 @@ const StyledHeader = styled.h1`
   padding: 12px;
   width: 95%;
   text-transform: uppercase;
+  @media (max-width: 1224px) {
+    margin-top: 8%;
+    margin-bottom: 2%;
+  }
+  @media (max-width: 800px) {
+    font-size: 22px;
+  }
 `
 
 const StyledDiv = styled.div`
@@ -75,7 +87,21 @@ const ContentDiv = styled.div`
   flex-direction: column;
   width: 100%;
   `
-
-  const MobileHeader = styled.div`
+// _____________________MOBILE_________________________________
+  
+const MobileHeader = styled.div`
     width: 70%;
   `
+
+const StyledList = styled.div`
+  font-family: font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  color: #111111;
+  margin: 6px;
+  > ul {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 1px solid lightgrey;
+    padding: 10px;
+  }
+`

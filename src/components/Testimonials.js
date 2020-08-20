@@ -66,6 +66,7 @@ const StyledText = styled.div`
   height: 85vh;
   width: 90%;
   margin-top: 30px;
+  margin-bottom: 40px;
   overflow: scroll;
 `
 

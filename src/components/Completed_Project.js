@@ -2,28 +2,53 @@ import React from 'react'
 import Menu from './Menu'
 import styled from 'styled-components'
 import Gallery from './Gallery'
+import MobileMenu from './MobileMenu'
+import { useWindowDimensions } from './Providers/WindowProvider'
 
 export default function CompletedProject(props) {
-
-
+  const { width } = useWindowDimensions()
+  const breakpoint = 1224
+  
+  function renderDesktop() {
   return(
     <>
-      <Menu/>
-      <StyledDiv>
-        <HeaderDiv>
-          <StyledHeader>{props.name}</StyledHeader>
-          <StyledList>
-            <StyledList>{props.description}</StyledList>
-            <StyledList>{props.specs}</StyledList>
-          </StyledList>          
-        </HeaderDiv>    
-        <GalleryDiv>
-          <Gallery images={props.images}/>
-        </GalleryDiv>
-      </StyledDiv>
+    <Menu/>
+    <StyledDiv>
+      <HeaderDiv>
+        <StyledHeader>{props.name}</StyledHeader>
+        <StyledList>
+          <StyledList>{props.description}</StyledList>
+          <StyledList>{props.specs}</StyledList>
+        </StyledList>          
+      </HeaderDiv>    
+      <GalleryDiv>
+        <Gallery images={props.images}/>
+      </GalleryDiv>
+    </StyledDiv>
     </>
-  )
+  )}
+
+  function renderMobile() {
+    return(
+      <>
+      <MobileMenu/>
+      <MobileHeader>
+          <StyledHeader>{props.name}</StyledHeader>
+      </MobileHeader>
+      <MobileGallery>
+        <Gallery images={props.images}/>
+      </MobileGallery>
+      <StyledList>
+          <StyledList>{props.description}</StyledList>
+          <StyledList>{props.specs}</StyledList>
+        </StyledList> 
+      </>
+    )}
+  
+  return ( width > breakpoint ? renderDesktop() : renderMobile())   
 }
+
+// _____________________DESKTOP_________________________________
 
 const GalleryDiv = styled.div`
   margin: auto;
@@ -45,6 +70,13 @@ const StyledHeader = styled.h1`
   color: white;
   padding: 12px;
   width: 90%;
+  @media (max-width: 1224px) {
+    margin-top: 8%;
+    margin-bottom: 8%;
+  }
+  @media (max-width: 800px) {
+    font-size: 22px;
+  }
 `
 
 const StyledDiv = styled.div`
@@ -70,4 +102,18 @@ const StyledList = styled.div`
     border-top: 1px solid lightgrey;
     padding: 10px;
   }
+`
+
+// _____________________MOBILE_________________________________
+
+const MobileHeader = styled.div`
+width: 70%;
+`
+
+const MobileGallery = styled.div`
+margin: auto;
+margin-top: 1.2%;
+height: auto;
+width: 100vw;
+overflow: hidden;
 `

@@ -3,7 +3,7 @@ import './App.css';
 import WindowProvider from './components/Providers/WindowProvider'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
-import PageLayout from './components/PageLayout'
+import PageLayout from './components/Layouts/PageLayout'
 
 import About from './components/About'
 import Method from './components/Method';
@@ -35,10 +35,10 @@ function App() {
             <PageLayout name="method" content={Method()} />
           </Route>
           <Route exact path="/pineridge">
-            <CurrentProject name="PINERIDGE" image={PineridgeImg} />
+            <PageLayout name="PINERIDGE" content={CurrentProject(PineridgeImg)} />
           </Route>
           <Route exact path="/robertson">
-            <CurrentProject name="ROBERTSON" image={RobertsonImg} />
+            <PageLayout name="ROBERTSON" content={CurrentProject(RobertsonImg)} />
           </Route>
           <Route exact path="/testimonials">
             <PageLayout name="testimonials" content={Testimonials()} />
