@@ -187,10 +187,11 @@ const StyledMenuIcon = styled(MenuOpenIcon)`
 
 const NavDiv = styled.div`
   width: auto;
+  z-index: 999;
   height: 44px;
   background-color: #181818;
   text-align: right;
-  position: absolute;
+  position: fixed;
   right: 0;
   bottom: 0;
   -webkit-backface-visibility: hidden;

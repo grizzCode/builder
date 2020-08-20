@@ -151,6 +151,7 @@ const StyledButton = styled(Button)`
 
 const NavDiv = styled.div`
   width: auto;
+  z-index: 999;
   height: 44px;
   background-color: #181818;
   text-align: right;

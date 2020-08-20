@@ -27,14 +27,14 @@ export default function PageLayout(props) {
     return(
       <>
       <MobileMenu/>
-      <StyledDiv>
-        <HeaderDiv>
-          <StyledHeader>{props.header}</StyledHeader>
-        </HeaderDiv>
+      <div>
+        <MobileHeader>
+          <StyledHeader>{props.name}</StyledHeader>
+        </MobileHeader>
         <ContentDiv> 
           {props.content}
         </ContentDiv>
-      </StyledDiv>    
+      </div>    
     </>
     )}
 
@@ -73,5 +73,9 @@ const ContentDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 98%;
+  width: 100%;
+  `
+
+  const MobileHeader = styled.div`
+    width: 70%;
   `

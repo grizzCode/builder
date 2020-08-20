@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 export default function About() {
 
   return (
-    <>
+    <div>
       <StyledText>
         <StyledP>At T and T Mountain Builders our primary focus is building comfortable, healthy and durable homes.</StyledP>
         <StyledP>T&T Mountain Builders was founded by Travis and Tammy Smith in 2002 as a custom carpentry company, and has evolved into a boutique home building company, typically only constructing 1-2 homes at a time. This allows us to focus on the fine details that typically get lost with larger firms.</StyledP>
@@ -22,36 +22,44 @@ export default function About() {
         <LogoImg1 src={Certified} />
         <LogoImg1 src={Doe} />
       </ImgDiv>
-    </>
+    </div>
   )
 }
 
 const StyledText = styled.div`
   margin: auto;
-  width: auto;
+  width: 100%;
   margin-top: 2%;
   font-size: 16px;
 `
 
 const StyledP = styled.p`
   font-family: inherit;
-  margin: 30px 80px 30px 80px;
+  margin: 3% 5% 3% 5%;
   color: black;
   font-weight: 300;
 `
 
 const ImgDiv = styled.div`
   display: flex;
+  align-items: center;
   justify-content: space-around;
+  margin-top: 1%;
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `
 
 const LogoImg1 = styled.img`
-  height: 160px;
+  height: 20vh;
   width: auto;
-  margin-top: 2%;
-  margin-bottom: 8%;
+  object-fit: cover;
+  margin-top: 40px;
 `
+
 const ButtonDiv = styled.div`
   display: flex;
   justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
 `

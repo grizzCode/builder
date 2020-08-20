@@ -1,4 +1,5 @@
 import React from 'react'
+
 import styled from 'styled-components'
 
 export default function Review() {
@@ -81,17 +82,17 @@ const LeftDiv = styled.div`
   background-color: #F9F8F4;
   padding: 6px 10px 6px 10px;
   width: 65%;
-  margin: 30px;
-  margin-left: 60px;
+  margin: 4%;
+  margin-left: 4%;
   border-radius: 4px;
 `
 
 const RightDiv = styled.div`
     padding: 6px 10px 6px 10px;
     width: 65%;
-    margin: 30px;
+    margin: 4%;
     position: relative;
-    left: 25%;
+    left: 20%;
     box-shadow: 4px 4px 8px grey;
     background-color: #F9F8F4;
     color: black;
