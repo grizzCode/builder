@@ -85,6 +85,10 @@ const LeftDiv = styled.div`
   margin: 4%;
   margin-left: 4%;
   border-radius: 4px;
+  @media (max-width: 760px) {
+    width: 85%;
+    position: inline;
+  }
 `
 
 const RightDiv = styled.div`
@@ -97,4 +101,8 @@ const RightDiv = styled.div`
     background-color: #F9F8F4;
     color: black;
     border-radius: 4px;
+    @media (max-width: 760px) {
+      width: 85%;
+      left: 0%
+    }
 `
