@@ -139,7 +139,8 @@ export default function FadeMenu() {
 const StyledButton = styled(Button)`
   &&& {
     color: white;
-    margin-right: 13px;
+    margin-right: 6px;
+    margin-left: 6px;
     font-size: 13px;
     &:hover {
       transition: transform .4s;
@@ -149,14 +150,13 @@ const StyledButton = styled(Button)`
 `;
 
 const NavDiv = styled.div`
-  width: 57.8%;
+  width: auto;
   height: 44px;
   background-color: #181818;
   text-align: right;
   position: fixed;
   bottom: 0;
   right: 0;
-  overflow: hidden;
   // border-radius: 4px 0px 0px 0px;
 `
 

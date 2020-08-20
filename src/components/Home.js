@@ -3,19 +3,36 @@ import Menu from './Menu'
 import Slider from './Slideshow'
 import Logo from '../images/logo.png'
 import styled from "styled-components";
-
+import { useWindowDimensions } from './Providers/WindowProvider'
+import MobileMenu from './MobileMenu'
 
 export default function Home() {
+  const { width } = useWindowDimensions()
+  const breakpoint = 1224
+  
+  function renderDesktop() {
+    return(
+      <>
+      <section className="home"> 
+        <StyledLogo src={Logo}/>
+        <Slider/>
+        <Menu/>
+      </section>
+      </>
+    )
+  }
 
-  return (
-    <>
-    <section className="home"> 
+  function renderMobile() {
+    return(
+      <section className="home"> 
       <StyledLogo src={Logo}/>
       <Slider/>
-      <Menu/>
+      <MobileMenu/>
     </section>
-    </>
-  )
+    )
+  }
+
+  return ( width > breakpoint ? renderDesktop() : renderMobile()) 
 }
 
 

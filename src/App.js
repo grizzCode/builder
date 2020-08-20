@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import WindowProvider from './components/Providers/WindowProvider'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 import About from './components/About'
@@ -13,9 +14,12 @@ import PineridgeImg from './images/Pineridge_res.jpg'
 import RobertsonImg from './images/Robertson_res.jpg'
 
 
+
 function App() {
 
   return (
+    <>
+    <WindowProvider>
     <BrowserRouter>
       <Switch>
           <Route exact path="/" component={Home}/>
@@ -56,6 +60,8 @@ function App() {
           </Route>
       </Switch>
     </BrowserRouter>
+    </WindowProvider>
+    </>
   );
 } 
 

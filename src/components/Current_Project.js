@@ -11,8 +11,7 @@ export default function CurrentProject(props) {
       <StyledDiv>
         <HeaderDiv>
           <StyledHeader>{props.name}</StyledHeader>
-        </HeaderDiv>
-        
+        </HeaderDiv>       
         <StyledImg src={props.image}/>
       </StyledDiv>
     </>
@@ -22,7 +21,7 @@ export default function CurrentProject(props) {
 const StyledImg = styled.img`
   margin: auto;
   margin-top: 0.6%;
-  height: 80vh;
+  height: auto;
   width: 74vw;
   overflow: hidden;
 `
