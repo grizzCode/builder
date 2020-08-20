@@ -24,7 +24,7 @@ export default function Home() {
     return(
       <>
       <StyledLogo src={Logo}/>
-      <MobileBackground/>
+      <Slider/>
       <MobileMenu/>
       </>
     )
@@ -43,15 +43,4 @@ const StyledLogo = styled.img`
   top: 0;
   left: 0;
   z-index: 2;
-`
-const MobileBackground = styled.div`
-  background: url("https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357241/T%20AND%20T%20BUILDERS/interlaken_2_hg2gt4_e73mk2_dgztcx.jpg") center center no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat,
-  background-position: center center;
-  height: 100vh;
-  z-index: -1;
-  @media (max-width: 1024px) {
-    background-size: contain;
-  }
 `

@@ -10,7 +10,7 @@ export default function Image(props) {
     background-position: center center;
     height: 100vh;
     z-index: -1;
-    @media (max-width: 1224px) {
+    @media (max-width: 1023px) {
       background-size: contain;
     }
 `
