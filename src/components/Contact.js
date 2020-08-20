@@ -7,9 +7,6 @@ export default function Contact() {
     <>
         <DivCenter>
           <AddressDiv>
-            <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
-          </AddressDiv>
-          <AddressDiv>
             <AddressLabel>Mailing</AddressLabel>
             <ContactP>
               PO Box 980547<br/>
@@ -17,7 +14,14 @@ export default function Contact() {
             </ContactP>
           </AddressDiv>
           <AddressDiv>
+            <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
+          </AddressDiv>
+          <AddressDiv>
             <AddressLabel>Office</AddressLabel>
+            <ContactP>
+              4376 N Forestdale Dr #12<br/>
+              Park City, Utah 84098
+            </ContactP>
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3025.118626322351!2d-111.46783198459562!3d40.69338497933395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x875212d0501c7f27%3A0xfe41af1d32eb6996!2s4376%20N%20Forestdale%20Dr%20%2312%2C%20Park%20City%2C%20UT%2084098!5e0!3m2!1sen!2sus!4v1597360190248!5m2!1sen!2sus" width="600" height="400" frameborder="0" title="office" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
           </AddressDiv>
         </DivCenter>
@@ -44,11 +48,15 @@ const DivCenter = styled.div`
  margin-left: 20%;
  display: flex;
  flex-wrap: wrap;
+ @media (max-width: 1224px) {
+  flex-direction: column;
+  margin-left: 2%;
+}
 `
 
 const AddressDiv = styled.div`
   width: 45%;
-  margin-top: 60px;
+  margin-top: 4%;
 `
 
 const AddressLabel = styled.h5`

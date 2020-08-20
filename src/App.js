@@ -4,14 +4,13 @@ import WindowProvider from './components/Providers/WindowProvider'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
 import PageLayout from './components/Layouts/PageLayout'
-
 import About from './components/About'
 import Method from './components/Method';
 import Associates from './components/Associates';
 import Testimonials from './components/Testimonials'
 import Contact from './components/Contact'
 import CurrentProject from './components/Current_Project';
-import CompletedProject from './components/Completed_Project';
+import CompletedProject from './components/Layouts/Completed_Project';
 import PineridgeImg from './images/Pineridge_res.jpg'
 import RobertsonImg from './images/Robertson_res.jpg'
 

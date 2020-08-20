@@ -1,9 +1,9 @@
 import React from 'react'
-import Menu from './Menu'
+import Menu from '../Menu'
 import styled from 'styled-components'
-import Gallery from './Gallery'
-import MobileMenu from './MobileMenu'
-import { useWindowDimensions } from './Providers/WindowProvider'
+import Gallery from '../Gallery'
+import MobileMenu from '../MobileMenu'
+import { useWindowDimensions } from '../Providers/WindowProvider'
 
 export default function CompletedProject(props) {
   const { width } = useWindowDimensions()
