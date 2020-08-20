@@ -185,20 +185,6 @@ const StyledMenuIcon = styled(MenuOpenIcon)`
   font-size: 36px;
 `
 
-
-const StyledButton = styled(Button)`
-  &&& {
-    color: white;
-    margin-right: 6px;
-    margin-left: 6px;
-    font-size: 13px;
-    &:hover {
-      transition: transform .4s;
-      transform: scale(1.1);
-    }
-  }
-`;
-
 const NavDiv = styled.div`
   width: auto;
   height: 44px;
@@ -215,7 +201,7 @@ const StyledMenuItem = styled(MenuItem)`
   text-transform: uppercase;
   text-decoration: none;
   font-family: Work Sans, sans-serif;
-  font-size: 16px !important;
+  font-size: 13px !important;
   margin-bottom: 3px;
   width: 100%;
 `
@@ -224,7 +210,7 @@ const StyledA = styled.a`
   text-transform: uppercase;
   text-decoration: none;
   font-family: Work Sans, sans-serif;
-  font-size: 16px;
+  font-size: 13px;
   margin-bottom: 3px;
 `
 

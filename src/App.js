@@ -3,6 +3,8 @@ import './App.css';
 import WindowProvider from './components/Providers/WindowProvider'
 import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
 import Home from './components/Home'
+import PageLayout from './components/PageLayout'
+
 import About from './components/About'
 import Method from './components/Method';
 import Associates from './components/Associates';
@@ -23,17 +25,27 @@ function App() {
     <BrowserRouter>
       <Switch>
           <Route exact path="/" component={Home}/>
-          <Route exact path="/about" component={About}/>
-          <Route exact path="/contact" component={Contact}/>
-          <Route exact path="/method" component={Method}/>
+          <Route exact path="/about">
+            <PageLayout name="about" content={About()} />
+          </Route>
+          <Route exact path="/contact">
+            <PageLayout name="contact" content={Contact()} />
+          </Route>
+          <Route exact path="/method">
+            <PageLayout name="method" content={Method()} />
+          </Route>
           <Route exact path="/pineridge">
             <CurrentProject name="PINERIDGE" image={PineridgeImg} />
           </Route>
           <Route exact path="/robertson">
             <CurrentProject name="ROBERTSON" image={RobertsonImg} />
           </Route>
-          <Route exact path="/testimonials" component={Testimonials}/>
-          <Route exact path="/associates" component={Associates}/>
+          <Route exact path="/testimonials">
+            <PageLayout name="testimonials" content={Testimonials()} />
+          </Route>
+          <Route exact path="/associates">
+            <PageLayout name="associates" content={Associates()} />
+          </Route>
           <Route exact path="/canyon">
             <CompletedProject name="PINERIDGE" images={pineridge_images} description={pineridge_description} specs={pineridge_specs}/>
           </Route>
