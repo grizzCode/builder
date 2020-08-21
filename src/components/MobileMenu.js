@@ -56,7 +56,7 @@ export default function MobileMenu() {
     <ThemeProvider theme={themeConfig}>
       <NavDiv>
         <Button aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick3}>
-          <MenuOpenIcon style={{ fontSize: 40 }}/>
+          <MenuOpenIcon style={{ fontSize: 40 }} />
         </Button>
         <Menu
           id="simple-menu-3"
@@ -133,29 +133,26 @@ export default function MobileMenu() {
             <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/canyon">
               Pineridge
           </StyledMenuItem>
-            <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/sterlingwood">
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/sterlingwood">
               Sterlingwood
           </StyledMenuItem>
-            <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/hitching_post">
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/hitching_post">
               Hitching Post
           </StyledMenuItem>
-            <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/maple">
+          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/maple">
               Maple Passive Haus
           </StyledMenuItem>
           </Menu>
           <StyledMenuItem component={RouterLink} to="/about">
             About
         </StyledMenuItem>
-          {/* </StyledLink>
-        {/* <StyledLink to="/method">
-          <StyledButton>
+        <StyledMenuItem component={RouterLink} to="/method">
             Method
-        </StyledButton>
-        </StyledLink> */}
-          <StyledMenuItem component={RouterLink} to="/testimonials">
+        </StyledMenuItem>
+        <StyledMenuItem component={RouterLink} to="/testimonials">
             Testimonials
         </StyledMenuItem>
-          <StyledMenuItem component={RouterLink} to="/contact">
+        <StyledMenuItem component={RouterLink} to="/contact">
             Contact
         </StyledMenuItem>
           <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
