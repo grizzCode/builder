@@ -103,12 +103,9 @@ export default function FadeMenu() {
         <StyledButton component={RouterLink} to="/about">
             About
         </StyledButton>
-        {/* </StyledLink> */}
-        {/* <StyledLink to="/method">
-          <StyledButton>
+        <StyledButton component={RouterLink} to="/method">
             Method
         </StyledButton>
-        </StyledLink> */}
         <StyledButton component={RouterLink} to="/testimonials">
           Testimonials
         </StyledButton>

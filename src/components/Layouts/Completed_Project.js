@@ -101,6 +101,7 @@ const StyledList = styled.div`
     margin-right: 10px;
     border-top: 1px solid lightgrey;
     padding: 10px;
+    font-weight: 400;
   }
 `
 
