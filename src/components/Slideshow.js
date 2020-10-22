@@ -13,22 +13,25 @@ export default class SimpleSlider extends React.Component {
       autoplaySpeed: 5000,
       infinite: true,
       slidesToShow: 1,
-      slidesToScroll: 1
+      slidesToScroll: 1,
+      draggable: false,
+      lazyLoad: "ondemand",
+      speed: 1000,
     };
 
     var images = [
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357241/T%20AND%20T%20BUILDERS/interlaken_2_hg2gt4_e73mk2_dgztcx.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357254/T%20AND%20T%20BUILDERS/stagecoach_rear_okynzh_s8liwq.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357240/T%20AND%20T%20BUILDERS/Interlaken_1_ocsqyz_e6arbd.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357234/T%20AND%20T%20BUILDERS/LaRoche_patio_vwg5us_he6jhq.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388376/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Iphone_1_qgxpfr.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388074/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Park_Meadows_Design-5_pmm9wu.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388773/T%20AND%20T%20BUILDERS/Home%20Page%20RS/6960Canyon_DR_72_jditfv.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357260/T%20AND%20T%20BUILDERS/Sterlingwood_fireplace_gmkbyr_ux85jb.jpg",
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357260/T%20AND%20T%20BUILDERS/meadows_rear_ibubr2_sozzpx.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357241/T%20AND%20T%20BUILDERS/meadows_entry_ptolxi_lp1sjf.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357235/T%20AND%20T%20BUILDERS/LaRoche_Entry_o58hcf_nytier.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357231/T%20AND%20T%20BUILDERS/LaRoche_stair_fqgpsm_enuqjh.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357233/T%20AND%20T%20BUILDERS/LaRoche_Front_elevation_yar0lu_ls8hzf.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357247/T%20AND%20T%20BUILDERS/Sorensen_qjpiem_eo74gh.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357254/T%20AND%20T%20BUILDERS/STagecoach_interior_2_rescuh_pvenzo.jpg",
-      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1597357258/T%20AND%20T%20BUILDERS/Stagecoach_front_uxp1gv_wqjk2f.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603394549/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Sorensen_m8zmwf.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603390273/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Park_Meadows_Design-19_ifle3j.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388394/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Park_Meadows_Design-22_ov6ppn.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603390248/T%20AND%20T%20BUILDERS/Home%20Page%20RS/6960Canyon_DR_66_npnnfq.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388095/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Park_Meadows_Design-26_r6bthg.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603388105/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Meadows_Dr_PC-5_xjqg9k.jpg",
+      "https://res.cloudinary.com/grizzcode-llc/image/upload/v1603390249/T%20AND%20T%20BUILDERS/Home%20Page%20RS/6960Canyon_DR_63_u9yvik.jpg",
     ]
 
   
