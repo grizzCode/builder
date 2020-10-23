@@ -15,7 +15,7 @@ export default class SimpleSlider extends React.Component {
       slidesToShow: 1,
       slidesToScroll: 1,
       draggable: false,
-      lazyLoad: "ondemand",
+      // lazyLoad: "ondemand",
       speed: 1000,
     };
 
