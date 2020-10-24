@@ -86,13 +86,6 @@ const StyledText = styled.div`
   overflow: scroll;
 `
 
-const StyledH5 = styled.h3`
-  font-family: inherit;
-  font-size: 30px;
-  font-weight: 400;
-  margin: 20px;
-  margin-top: 50px;
-`
 const StyledSubhead = styled.h3`
   font-family: inherit;
   font-size: 20px;
