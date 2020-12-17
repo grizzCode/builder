@@ -14,9 +14,9 @@ export default class SimpleSlider extends React.Component {
       infinite: true,
       slidesToShow: 1,
       slidesToScroll: 1,
-      draggable: false,
       speed: 1000,
     };
+
 
     var images = [
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1604116021/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Iphone_1_qgxpfr_mriqre.jpg",

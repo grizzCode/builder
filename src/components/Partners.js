@@ -6,7 +6,14 @@ export default function Associates() {
   return (
     <>
       <StyledText>
-        <StyledH4>Associates</StyledH4>
+        <StyledH4>ARCHITECTS</StyledH4>
+         <p>Chris  : Klima Architecture</p>
+         <p>Andrew: Drift design</p>
+         <p>Imbue design</p>
+         <p>Brach design</p>
+        <StyledH4>DESIGNERS</StyledH4>
+        <p>Julie Chahine : J squared interiors</p>
+        <p>Mette Axboe : Home style Park City</p>
       </StyledText>
     </>
   )
