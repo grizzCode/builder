@@ -29,6 +29,7 @@ const StyledText = styled.div`
 
 const StyledH4 = styled.h3`
   font-family: inherit;
+  font-size: 26px;
   text-transform: uppercase;
   font-weight: 400;
   margin: 20px;
