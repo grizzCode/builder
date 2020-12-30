@@ -55,7 +55,7 @@ export default function Associates() {
           <StyledSecondaryH4>DESIGNERS</StyledSecondaryH4>
         </Border>
         <ContainerDiv>
-          <StyledA href="https://www.brachdesign.com/">
+          <StyledA href="http://jsquaredinteriors.com/">
             <AnimationContainer>
               <FlexDiv>
                 <StyledP>J Squared Interiors</StyledP>
@@ -63,7 +63,7 @@ export default function Associates() {
               </FlexDiv>
             </AnimationContainer>
           </StyledA>
-          <StyledA href="https://www.brachdesign.com/">
+          <StyledA href="https://www.homestyleparkcity.com/">
             <AnimationContainer>
               <FlexDiv>
                 <StyledP>Home Style Park City</StyledP>
