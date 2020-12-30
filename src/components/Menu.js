@@ -8,7 +8,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { Link as RouterLink } from 'react-router-dom'
 import HouzzIcon from '../images/houzz.png'
 import InstagramIcon from '@material-ui/icons/Instagram';
-import Partners from './Partners'
+
 
 
 
