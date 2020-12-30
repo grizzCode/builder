@@ -3,7 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import SliderImg from './SliderImg'
- 
+import styled from 'styled-components'
 
 export default class SimpleSlider extends React.Component {
   render() {
@@ -33,13 +33,21 @@ export default class SimpleSlider extends React.Component {
       "https://res.cloudinary.com/grizzcode-llc/image/upload/v1604116027/T%20AND%20T%20BUILDERS/Home%20Page%20RS/Park_Meadows_Design-26_r6bthg_rwfc7j.jpg",
     ]
 
-  
+
     return (
-      <Slider {...settings}>
-        {images.map((image) => (
-          <SliderImg image={image} /> 
-        ))}
-      </Slider>
+      <ContainerDiv>
+        <Slider {...settings}>
+          {images.map((image) => (
+            <SliderImg image={image} />
+          ))}
+        </Slider>
+      </ContainerDiv>
     );
   }
 }
+
+
+const ContainerDiv = styled.div`
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+`
