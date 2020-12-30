@@ -1,17 +1,17 @@
 import React from 'react';
 import './App.css';
-import WindowProvider from './components/Providers/WindowProvider'
-import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
-import Home from './components/Home'
+import WindowProvider from './components/Providers/WindowProvider';
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom';
+import Home from './components/Home';
 import PageLayout from './components/Layouts/PageLayout'
-import About from './components/About'
+import About from './components/About';
 import Method from './components/Method';
-import Associates from './components/Associates';
+import Partners from './components/Partners';
 import Testimonials from './components/Testimonials'
-import Contact from './components/Contact'
+import Contact from './components/Contact';
 import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Layouts/Completed_Project';
-import PineridgeImg from './images/Pineridge_res.jpg'
+import PineridgeImg from './images/Pineridge_res.jpg';
 import RobertsonImg from './images/Robertson_res.jpg'
 
 
@@ -42,8 +42,8 @@ function App() {
           <Route exact path="/testimonials">
             <PageLayout name="testimonials" content={Testimonials()} />
           </Route>
-          <Route exact path="/associates">
-            <PageLayout name="associates" content={Associates()} />
+          <Route exact path="/partners">
+            <PageLayout name="partners" content={Partners()} />
           </Route>
           <Route exact path="/canyon">
             <CompletedProject name="PINERIDGE" images={pineridge_images} description={pineridge_description} specs={pineridge_specs}/>

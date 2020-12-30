@@ -8,6 +8,7 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { Link as RouterLink } from 'react-router-dom'
 import HouzzIcon from '../images/houzz.png'
 import InstagramIcon from '@material-ui/icons/Instagram';
+import Partners from './Partners'
 
 
 
@@ -117,6 +118,9 @@ export default function FadeMenu() {
             Client Login
           </StyledButton>
         </StyledA>
+        <StyledButton component={RouterLink} to="/partners">
+          Partners
+        </StyledButton>
         <Button>
           <a href="https://www.instagram.com/tandttravis/?hl=en">
             <StyledInstagram />
