@@ -160,6 +160,9 @@ export default function MobileMenu() {
               Client Login
           </StyledMenuItem>
           </StyledA>
+          <StyledMenuItem component={RouterLink} to="/partners">
+            Partners
+        </StyledMenuItem>
           <Button>
             <a href="https://www.instagram.com/tandttravis/?hl=en">
               <StyledInstagram />
