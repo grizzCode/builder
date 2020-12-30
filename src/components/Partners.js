@@ -122,6 +122,7 @@ const FlexDiv = styled.div`
   margin: auto;
   margin-top: 4%;
   text-align: center;
+
 `
 
 const AnimationContainer = styled.div`
@@ -146,6 +147,10 @@ const ContainerDiv = styled.div`
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 6%;
+  @media (max-width: 660px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `
 const Border = styled.div`
   border-bottom: 1px solid lightgrey;
