@@ -13,7 +13,7 @@ import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Layouts/Completed_Project';
 import PineridgeImg from './images/Pineridge_res.jpg'
 import RobertsonImg from './images/Robertson_res.jpg'
-
+import Windows from './components/Windows'
 
 
 function App() {
@@ -26,6 +26,9 @@ function App() {
           <Route exact path="/" component={Home}/>
           <Route exact path="/about">
             <PageLayout name="about" content={About()} />
+          </Route>
+          <Route exact path="/windows">
+            <Windows/>
           </Route>
           <Route exact path="/contact">
             <PageLayout name="contact" content={Contact()} />

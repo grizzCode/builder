@@ -14,7 +14,7 @@ export default function Contact() {
             </ContactP>
           </AddressDiv>
           <AddressDiv>
-            <ContactA href="mailto:tandttravis@hotmail.com">tandttravis@hotmail.com</ContactA>
+            <ContactA href="mailto:tandttravis@hotmail.com">travis@tandtmountainbuilders.com</ContactA>
           </AddressDiv>
           <AddressDiv>
             <AddressLabel>Office</AddressLabel>
