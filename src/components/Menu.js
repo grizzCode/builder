@@ -50,7 +50,7 @@ export default function FadeMenu() {
           Home
         </StyledButton>
         <StyledButton to="/windows" component={RouterLink}>
-          Glo Windows
+          European Windows & Doors
         </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           Current

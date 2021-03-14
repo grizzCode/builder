@@ -3,11 +3,12 @@ import Menu from './Menu'
 import Slider from './Slideshow'
 import Logo from '../images/logo2.png'
 import GloLogo from '../images/Glo Logo ROUND.jpg'
+import AirLogo from '../images/ALX_Logo.jpg'
 import styled from "styled-components";
 import { useWindowDimensions } from './Providers/WindowProvider'
 import MobileMenu from './MobileMenu'
 import { Link as RouterLink } from 'react-router-dom'
-import Button from '@material-ui/core/Button';
+
 
 export default function Home() {
   const { width } = useWindowDimensions()
@@ -22,15 +23,15 @@ export default function Home() {
           </SliderDiv>
           <WindowDiv>
             <StyledLogo src={Logo} />
-            <div>
-              <hr />
-              <h3>UTAH DEALER & INSTALLER</h3>
-              <hr />
-            </div>
-            <StyledBottomLogo src={GloLogo} />
-            <Button>
-              <StyledRouterLink to="/windows">LEARN MORE</StyledRouterLink>
-            </Button>
+            <BorderDiv>
+              <h3>Utah Representative for Glo Windows and Air-Lux Doors</h3>
+            </BorderDiv>
+            <StyledRouterLink to="/windows">
+              <StyledGloLogo src={GloLogo} />
+            </StyledRouterLink>
+            <StyledRouterLink to="/windows">
+              <StyledAirLogo src={AirLogo} />
+            </StyledRouterLink>
           </WindowDiv>
         </ContainerDiv>
         <Menu />
@@ -47,7 +48,7 @@ export default function Home() {
             <MobileLogo src={GloLogo} />
           </MobileContainerDiv>
           <div>
-            <h3>Windows</h3>
+            <StyledHeading>Windows</StyledHeading>
           </div>
           <div>
             <Slider />
@@ -63,23 +64,38 @@ export default function Home() {
 
 
 const StyledLogo = styled.img`
-  height: 200px;
+  height: 190px;
   width: auto;
   padding: 12px;
   background-color: rgba(255,255,255,1);
   margin-bottom: 10%;
+  margin-top: 2%;
+  margin-right: 4%;
 `
-const StyledBottomLogo = styled.img`
-  height: 200px;
+const StyledGloLogo = styled.img`
+  height: 175px;
   width: auto;
-  padding: 12px;
+  padding: 6px;
   background-color: rgba(255,255,255,1);
-  margin-top: 10%;
+`
+
+const StyledAirLogo = styled.img`
+  height: 60px;
+  width: auto;
+  margin-bottom: 10%;
+  margin-top: 5%;
+`
+
+const BorderDiv = styled.div`
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-right: 5%;
 `
 
 const SliderDiv = styled.div`
   overflow: hidden;
   width: 75%;
+  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
 `
 
 const ContainerDiv = styled.div`
@@ -90,10 +106,20 @@ const ContainerDiv = styled.div`
 
 const WindowDiv = styled.div`
   width: 25%;
+  height: %;
+  position: fixed;
+  top: 0;
+  right: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
+`
+
+const StyledHeading = styled.h3`
+  margin-right: 10%;
+ color: red;
 `
 
 const MobileContainerDiv = styled.div`
@@ -110,15 +136,6 @@ const MobileLogo = styled.img`
   background-color: rgba(255,255,255,1);
 `
 const StyledRouterLink = styled(RouterLink)`
-  background-color: #706e6c;
-  text-decoration: none;
-  color: white;
-  padding: 6px;
-  border-radius: 8px;
-  &:hover {
-    transition: transform .4s;
-    transform: scale(1.1);
-    background-color: #ED7425;
-    color: black;
-  }
+  margin-right: 10%;
+  margin-top: 5%;
 `
