@@ -2,7 +2,6 @@ import React from 'react'
 import styled from 'styled-components'
 import Card from './WindowCard'
 import PropTypes from 'prop-types';
-import { makeStyles } from '@material-ui/core/styles';
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
@@ -19,6 +18,7 @@ import LSD from '../images/Glo_Img/LS lift and slide door.jpg'
 import PCD from '../images/Glo_Img/PC postless corner door.jpg'
 import PD from '../images/Glo_Img/PD air lux pivot door.jpg'
 import SD from '../images/Glo_Img/SD air lux sliding door.jpg'
+import Logo from '../images/logo2.png'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -54,22 +54,15 @@ function a11yProps(index) {
 }
 
 
-const useStyles = makeStyles((theme) => ({
-  root: {
-    flexGrow: 1,
-  },
 
-}));
 
 
 const theme = createMuiTheme({
   overrides: {
-    // Style sheet name ⚛️
     MuiTabs: {
-      // Name of the rule
       root: {
-        // Some CSS
         background: 'black',
+        flexGrow: 1,
       },
     },
   },
@@ -77,7 +70,6 @@ const theme = createMuiTheme({
 
 
 export default function WindowTabs() {
-  const classes = useStyles();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
@@ -86,19 +78,79 @@ export default function WindowTabs() {
 
   return (
     <>
-      <div>   
-        <StyledH4>Window Sales</StyledH4> 
-        <p>T&T Mountain Builders is a full-service dealer</p>
-      </div>
+      <HeaderWrapper>
+        <StyledLogo src={Logo}/>
+        <HeadTextWrapper>
+        <Heading>T&T Mountain Builders is your full-service Utah dealer for Glo and Air-Lux window and door products</Heading>
+        <p> 
+          As a successful General Contractor specializing in highly energy efficient custom mountain homes, we have the 
+          full-spectrum knowledge to ensure your project is as smooth and successful as possible from inception to completion 
+          and continued life cycle. We have worked with these windows and doors for several years, and it was a natural extension of
+           our business to provide and service these incredibly well engineered European door and window packages. 
+        </p>
+        </HeadTextWrapper>
+      </HeaderWrapper>
+      <ProcessWrapper>
+        <ProcessHeading>
+          GUIDED PROCESS
+        </ProcessHeading>
+        <ProcessBanner>
+          <Banner1P>Starts with selecting the best products to compliment your design and project constraints.</Banner1P> 
+        </ProcessBanner>
+        <ProcessBanner>
+          <Banner2P>In-house installation service with a specially-trained crew that knows the tolerances and demands of correct installation of these products.</Banner2P> 
+        </ProcessBanner>
+        <ProcessBanner>
+          <Banner3P>Continued service and adjustment after installation to ensure an exceptional ownership experience.</Banner3P> 
+        </ProcessBanner>
+        <ProcessBanner>
+          <Banner4P>Single point of contact means that we accept full responsibility for and are invested in the success and continued support of your door and window package.</Banner4P>
+        </ProcessBanner>
+        
+
+ 
+
+ 
+-  
+      </ProcessWrapper>
       <ThemeProvider theme={theme}>
-      <div className={classes.root}>
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
-            <Tab label="Aluminum Windows" {...a11yProps(0)} />
-            <Tab label="Aluminum Doors" {...a11yProps(1)} />
+            <Tab label="Air-Lux" {...a11yProps(0)} />
+            <Tab label="Aluminum Windows" {...a11yProps(1)} />
+            <Tab label="Aluminum Doors" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
+          <CardWrapperDiv>
+            <Card
+              image={PD}
+              imageTitle="Air Lux Pivot Door Series"
+              href="https://glowindows.com/product/air-lux-pivot-door/"
+              series="PD"
+              title="Air-Lux Pivot Door"
+              content="The ground-breaking Air-Lux Pivot Door provides a unique and enviable aesthetic without the typical drawbacks associated with pivoting entrance doors. The robust and dynamic hardware allows for incredibly large door panels to effortlessly rotate on a central or lateral axis, providing a show-stopping alternative to conventional doors at oversized entrance locations. A state-of-the-art air and […]"
+            />
+            <Card
+              image={SD}
+              imageTitle="Air Lux Sliding Door Series"
+              href="https://glowindows.com/product/sliding-doors-air-lux/"
+              series="SD"
+              title="Air-Lux Sliding Doors"
+              content="Once again upending the fenestration industry with superior design and construction, the Air-Lux Sliding Door leaves lesser door systems in the dust with its ability to span incredible dimensions and provide 100% impermeable water and air sealing. This patented sealing system combined with the ability to accommodate sliding leaf weights of up to nearly 4000lbs […]"
+            />
+            <Card
+              image={DW}
+              imageTitle="Air Lux DW Window Series"
+              href="https://glowindows.com/product/air-lux-descending-window/"
+              series="DW"
+              title="Air-Lux Descending Window"
+              content="Air-Lux has created a new paradigm in fenestration products with the Descending Window. By designing a system in which the entire width of the window can be opened without the requirements of side pockets or stacked sliding panels, Air-Lux has once again shattered pre-conceived expectations and limitations in both the design and construction of exterior […]"
+            />
+          </CardWrapperDiv>
+        </TabPanel>
+
+        <TabPanel value={value} index={1}>
           <CardWrapperDiv>
             <Card
               image={A5}
@@ -124,17 +176,10 @@ export default function WindowTabs() {
               title="Curtain Wall Double + Triple Pane Aluminum"
               content="Achieve eye-catching designs through innovative custom solutions with our Curtain Wall systems; available in both double and triple pane thermally-broken aluminum."
             />
-            <Card
-              image={DW}
-              imageTitle="Glo DW Window Series"
-              href="https://glowindows.com/product/air-lux-descending-window/"
-              series="DW"
-              title="Air-Lux Descending Window"
-              content="Air-Lux has created a new paradigm in fenestration products with the Descending Window. By designing a system in which the entire width of the window can be opened without the requirements of side pockets or stacked sliding panels, Air-Lux has once again shattered pre-conceived expectations and limitations in both the design and construction of exterior […]"
-            />
           </CardWrapperDiv>
         </TabPanel>
-        <TabPanel value={value} index={1}>
+
+        <TabPanel value={value} index={2}>
           <CardWrapperDiv>
             <Card
               image={A5D}
@@ -168,25 +213,9 @@ export default function WindowTabs() {
               title="Postless Corner Doors"
               content="Highly customizable and inherently impressive, the Postless Corner Door exemplifies modern style and serves as a perfect complement to contemporary trends."
             />
-            <Card
-              image={PD}
-              imageTitle="Air Lux Pivot Door Series"
-              href="https://glowindows.com/product/air-lux-pivot-door/"
-              series="PD"
-              title="Air-Lux Pivot Door"
-              content="The ground-breaking Air-Lux Pivot Door provides a unique and enviable aesthetic without the typical drawbacks associated with pivoting entrance doors. The robust and dynamic hardware allows for incredibly large door panels to effortlessly rotate on a central or lateral axis, providing a show-stopping alternative to conventional doors at oversized entrance locations. A state-of-the-art air and […]"
-            />
-            <Card
-              image={SD}
-              imageTitle="Air Lux Sliding Door Series"
-              href="https://glowindows.com/product/sliding-doors-air-lux/"
-              series="SD"
-              title="Air-Lux Sliding Doors"
-              content="Once again upending the fenestration industry with superior design and construction, the Air-Lux Sliding Door leaves lesser door systems in the dust with its ability to span incredible dimensions and provide 100% impermeable water and air sealing. This patented sealing system combined with the ability to accommodate sliding leaf weights of up to nearly 4000lbs […]"
-            />
-        </CardWrapperDiv>
-      </TabPanel>
-      </div>
+
+          </CardWrapperDiv>
+        </TabPanel>
       </ThemeProvider>
     </>
   );
@@ -204,3 +233,73 @@ const CardWrapperDiv = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
 `
+
+const HeadTextWrapper = styled.div`
+  width: 80%;
+  margin: auto;
+  margin-bottom: 2%;
+`
+
+const StyledLogo = styled.img`
+  height: 120px;
+  margin: 2%;
+
+`
+
+const HeaderWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`
+
+const Heading = styled.h2`
+font-weight: 400;
+
+`
+
+const ProcessWrapper = styled.div`
+  margin-top: 0;
+`
+
+const ProcessHeading = styled.h1`
+  text-align: center;
+  color: grey;
+  font-weight: 100;
+`
+
+const ProcessBanner = styled.div`
+  width: 100%;
+`
+const Banner1P = styled.p`
+  background-color: grey;
+  width: 35%;
+  padding: 2%;
+  margin-left: 2%;
+  color: #EEEEEE;
+  font-weight: 300;
+`
+const Banner2P = styled.p`
+ background-color: grey;
+  width: 35%;
+  padding: 2%;
+  margin-left: 20%;
+  color: #EEEEEE;
+  font-weight: 300;
+`
+const Banner3P = styled.p`
+  background-color: grey;
+  width: 35%;
+  padding: 2%;
+  margin-left: 45%;
+  color: #EEEEEE;
+  font-weight: 300;
+`
+const Banner4P = styled.p`
+  background-color: grey;
+  width: 35%;
+  padding: 2%;
+  margin-left: 60%;
+  color: #EEEEEE;
+  font-weight: 300;
+`
+
