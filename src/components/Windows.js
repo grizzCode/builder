@@ -221,13 +221,6 @@ export default function WindowTabs() {
   );
 }
 
-
-const StyledH4 = styled.h3`
-  font-family: inherit;
-  text-transform: uppercase;
-  font-weight: 400;
-  margin: 20px;
-`
 const CardWrapperDiv = styled.div`
   display: flex;
   justify-content: space-between;
