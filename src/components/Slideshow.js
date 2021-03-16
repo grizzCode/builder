@@ -35,13 +35,12 @@ export default class SimpleSlider extends React.Component {
 
 
     return (
-      <ContainerDiv>
-        <Slider {...settings}>
-          {images.map((image) => (
-            <SliderImg image={image} />
-          ))}
-        </Slider>
-      </ContainerDiv>
+
+      <Slider {...settings}>
+        {images.map((image) => (
+          <SliderImg image={image}/> 
+        ))}
+      </Slider>
     );
   }
 }

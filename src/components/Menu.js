@@ -50,6 +50,9 @@ export default function FadeMenu() {
         <StyledButton to="/" component={RouterLink}>
           Home
         </StyledButton>
+        <StyledButton to="/windows" component={RouterLink}>
+          European Windows & Doors
+        </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           Current
         </StyledButton>
@@ -139,6 +142,7 @@ export default function FadeMenu() {
 
 const StyledButton = styled(Button)`
   &&& {
+    border-radius: 0;
     color: white;
     margin-right: 6px;
     margin-left: 6px;
