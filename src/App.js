@@ -12,7 +12,7 @@ import Contact from './components/Contact';
 import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Layouts/Completed_Project';
 import RobertsonImg from './images/Robertson_res.jpg'
-import ElevenHaus from './images/Enscape_2021-01-21-11-09-42.png'
+
 
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
             <PageLayout name="method" content={Method()} />
           </Route>
           <Route exact path="/11_haus">
-            <PageLayout name="11 Haus" content={CurrentProject(ElevenHaus)} />
+            <PageLayout name="11 Haus" content={CurrentProject('https://res.cloudinary.com/grizzcode-llc/image/upload/v1615922793/T%20AND%20T%20BUILDERS/Enscape_o6e4jl.jpg')} />
           </Route>
           <Route exact path="/robertson">
             <PageLayout name="ROBERTSON" content={CurrentProject(RobertsonImg)} />
