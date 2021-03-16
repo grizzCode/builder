@@ -67,8 +67,8 @@ export default function FadeMenu() {
           <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
             Robertson
           </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/pineridge">
-            Pineridge
+          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
+            11 Haus
           </StyledMenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>

@@ -11,7 +11,6 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact';
 import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Layouts/Completed_Project';
-import PineridgeImg from './images/Pineridge_res.jpg';
 import RobertsonImg from './images/Robertson_res.jpg'
 import Windows from './components/Windows'
 
@@ -36,8 +35,8 @@ function App() {
           <Route exact path="/method">
             <PageLayout name="method" content={Method()} />
           </Route>
-          <Route exact path="/pineridge">
-            <PageLayout name="PINERIDGE" content={CurrentProject(PineridgeImg)} />
+          <Route exact path="/11_haus">
+            <PageLayout name="11 Haus" content={CurrentProject('https://res.cloudinary.com/grizzcode-llc/image/upload/v1615922793/T%20AND%20T%20BUILDERS/Enscape_o6e4jl.jpg')} />
           </Route>
           <Route exact path="/robertson">
             <PageLayout name="ROBERTSON" content={CurrentProject(RobertsonImg)} />
