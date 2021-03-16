@@ -109,6 +109,8 @@ const WindowDiv = styled.div`
   height: %;
   position: fixed;
   top: 0;
+
+=======
   right: 0;
   display: flex;
   flex-direction: column;
@@ -139,3 +141,4 @@ const StyledRouterLink = styled(RouterLink)`
   margin-right: 10%;
   margin-top: 5%;
 `
+

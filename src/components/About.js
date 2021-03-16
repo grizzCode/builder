@@ -45,6 +45,7 @@ const ImgDiv = styled.div`
   align-items: center;
   justify-content: space-around;
   margin-top: 1%;
+  margin-bottom: 15%;
   @media (max-width: 768px) {
     flex-direction: column;
   }

@@ -46,6 +46,7 @@ const DivCenter = styled.div`
  text-transform: uppercase;
  margin: auto;
  margin-left: 20%;
+ margin-bottom: 15%;
  display: flex;
  flex-wrap: wrap;
  @media (max-width: 1224px) {

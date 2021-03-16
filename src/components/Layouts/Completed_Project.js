@@ -53,7 +53,7 @@ export default function CompletedProject(props) {
 const GalleryDiv = styled.div`
   margin: auto;
   margin-top: 1.2%;
-  height: 80vh;
+  height: 85vh;
   width: 66vw;
   overflow: hidden;
 `

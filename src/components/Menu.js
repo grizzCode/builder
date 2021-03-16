@@ -11,6 +11,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 
+
 export default function FadeMenu() {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl2, setAnchorEl2] = React.useState(null);
@@ -66,8 +67,8 @@ export default function FadeMenu() {
           <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
             Robertson
           </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/pineridge">
-            Pineridge
+          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
+            11 Haus
           </StyledMenuItem>
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
@@ -120,6 +121,9 @@ export default function FadeMenu() {
             Client Login
           </StyledButton>
         </StyledA>
+        <StyledButton component={RouterLink} to="/partners">
+          Partners
+        </StyledButton>
         <Button>
           <a href="https://www.instagram.com/tandttravis/?hl=en">
             <StyledInstagram />
