@@ -11,9 +11,8 @@ import Testimonials from './components/Testimonials'
 import Contact from './components/Contact';
 import CurrentProject from './components/Current_Project';
 import CompletedProject from './components/Layouts/Completed_Project';
-import PineridgeImg from './images/Pineridge_res.jpg';
 import RobertsonImg from './images/Robertson_res.jpg'
-
+import ElevenHaus from './images/Enscape_2021-01-21-11-09-42.png'
 
 
 function App() {
@@ -33,8 +32,8 @@ function App() {
           <Route exact path="/method">
             <PageLayout name="method" content={Method()} />
           </Route>
-          <Route exact path="/pineridge">
-            <PageLayout name="PINERIDGE" content={CurrentProject(PineridgeImg)} />
+          <Route exact path="/11_haus">
+            <PageLayout name="11 Haus" content={CurrentProject(ElevenHaus)} />
           </Route>
           <Route exact path="/robertson">
             <PageLayout name="ROBERTSON" content={CurrentProject(RobertsonImg)} />
