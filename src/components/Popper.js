@@ -8,9 +8,10 @@ import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles((theme) => ({
   paper: {
-    border: '1px solid grey',
     padding: theme.spacing(2),
     backgroundColor: "#efebe6",
+    borderRadius: "4px",
+    boxShadow: "5px 5px 7px black",
   },
 }));
 
@@ -36,7 +37,7 @@ export default function SimplePopper() {
             <div className={classes.paper}>
               <h4>WE WANT TO HEAR ABOUT YOUR PROJECT</h4>
               <p>Reach out to us:</p>
-              <a href="mailto:travis@tandtmountainbuilders.com">travis@tandtmountainbuilders.com</a>
+              <ContactA href="mailto:travis@tandtmountainbuilders.com">travis@tandtmountainbuilders.com</ContactA>
             </div>
           </Fade>
         )}
@@ -46,7 +47,7 @@ export default function SimplePopper() {
 }
 
 const StyledButton = styled(Button)`
-  width: 60%;
+  width: 50%;
   background-color: #99D420!important;
   margin-right: 8%!important;
   transition: transform .4s!important;
@@ -55,4 +56,13 @@ const StyledButton = styled(Button)`
     transform: scale(1.07);
   }
 
+`
+
+const ContactA = styled.a`
+  color: rgb(158, 203, 40);
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-bottom: 30px;
+  width: 100%;
 `

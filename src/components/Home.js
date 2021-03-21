@@ -67,6 +67,8 @@ export default function Home() {
   return (width > breakpoint ? renderDesktop() : renderMobile())
 }
 
+const Bground = "#dbe0dd"
+
 // ________________ DESKTOP STYLING ____________ 
 const LogoWrapper = styled.div`
   display: flex;
@@ -107,7 +109,7 @@ const SliderDiv = styled.div`
 const ContainerDiv = styled.div`
   display: flex;
   height: 100%;
-  background-color: #efebe6;
+  background-color: ${Bground};
 `
 
 const WindowDiv = styled.div`
@@ -118,10 +120,10 @@ const WindowDiv = styled.div`
   right: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: #efebe6;
+  background-color: ${Bground};
   overflow: scroll;
 `
 
@@ -148,21 +150,12 @@ const MobileLogo = styled.img`
 
 // __________ SHARED STYLING ___________
 
-const StyledButton = styled(Button)`
-  width: 60%;
-  background-color: #99D420!important;
-  margin-right: 8%!important;
-  transition: transform .4s!important;
-  &:hover {
-    transition: transform .4s;
-    transform: scale(1.07);
-  }
 
-`
 const StyledGloButton = styled(Button)`
-  width: 60%;
+  width: 50%;
   background-color: #EF6418!important;
   margin-right: 8%!important;
+  margin-bottom: 20%!important;
   text-decoration: none!important;
   transition: transform .4s!important;
   &:hover {
