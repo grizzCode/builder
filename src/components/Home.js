@@ -2,19 +2,23 @@ import React from 'react'
 import Menu from './Menu'
 import Slider from './Slideshow'
 import Logo from '../images/logo2.png'
-import GloLogo from '../images/Glo Logo ROUND.jpg'
-import AirLogo from '../images/ALX_Logo.jpg'
+import GloLogo from '../images/HorizontalGlo.png'
 import styled from "styled-components";
 import { useWindowDimensions } from './Providers/WindowProvider'
 import MobileMenu from './MobileMenu'
 import { Link as RouterLink } from 'react-router-dom'
+import Button from '@material-ui/core/Button';
+import Popper from './Popper'
+
 
 
 export default function Home() {
   const { width } = useWindowDimensions()
   const breakpoint = 1366
 
+
   function renderDesktop() {
+
     return (
       <>
         <ContainerDiv>
@@ -22,16 +26,17 @@ export default function Home() {
             <Slider />
           </SliderDiv>
           <WindowDiv>
-            <StyledLogo src={Logo} />
+            <LogoWrapper>
+              <StyledLogo src={Logo} />
+              <Popper/>
+            </LogoWrapper>
             <BorderDiv>
-              <h3>Utah Representative for Glo Windows and Air-Lux Doors</h3>
+              <h3>Glo European Windows and Doors Official Partner</h3>
             </BorderDiv>
-            <StyledRouterLink to="/windows">
+            <LogoWrapper>
               <StyledGloLogo src={GloLogo} />
-            </StyledRouterLink>
-            <StyledRouterLink to="/windows">
-              <StyledAirLogo src={AirLogo} />
-            </StyledRouterLink>
+              <StyledGloButton component={RouterLink} to="/windows">Learn More</StyledGloButton>
+            </LogoWrapper>
           </WindowDiv>
         </ContainerDiv>
         <Menu />
@@ -62,28 +67,29 @@ export default function Home() {
   return (width > breakpoint ? renderDesktop() : renderMobile())
 }
 
+// ________________ DESKTOP STYLING ____________ 
+const LogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10%;
+  margin-top: 8%;
+`
 
 const StyledLogo = styled.img`
-  height: 190px;
+  height: 170px;
   width: auto;
   padding: 12px;
-  background-color: rgba(255,255,255,1);
   margin-bottom: 10%;
-  margin-top: 2%;
-  margin-right: 4%;
+  margin-right: 10%;
 `
 const StyledGloLogo = styled.img`
-  height: 175px;
+  height: 90px;
   width: auto;
   padding: 6px;
-  background-color: rgba(255,255,255,1);
-`
-
-const StyledAirLogo = styled.img`
-  height: 60px;
-  width: auto;
   margin-bottom: 10%;
-  margin-top: 5%;
 `
 
 const BorderDiv = styled.div`
@@ -94,19 +100,19 @@ const BorderDiv = styled.div`
 
 const SliderDiv = styled.div`
   overflow: hidden;
-  width: 75%;
-  clip-path: polygon(0 0, 100% 0, 95% 100%, 0 100%);
+  width: 80%;
+  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
 `
 
 const ContainerDiv = styled.div`
   display: flex;
-  background-color: white;
   height: 100%;
+  background-color: #efebe6;
 `
 
 const WindowDiv = styled.div`
-  width: 25%;
-  height: %;
+  width: 20%;
+  height: 100%;
   position: fixed;
   top: 0;
   right: 0;
@@ -115,12 +121,16 @@ const WindowDiv = styled.div`
   justify-content: center;
   align-items: center;
   text-align: center;
+  background-color: #efebe6;
+  overflow: scroll;
 `
 
 const StyledHeading = styled.h3`
   margin-right: 10%;
  color: red;
 `
+
+// ___________ MOBILE STYLING ________________ 
 
 const MobileContainerDiv = styled.div`
   display: flex;
@@ -135,7 +145,29 @@ const MobileLogo = styled.img`
   padding: 8px;
   background-color: rgba(255,255,255,1);
 `
-const StyledRouterLink = styled(RouterLink)`
-  margin-right: 10%;
-  margin-top: 5%;
+
+// __________ SHARED STYLING ___________
+
+const StyledButton = styled(Button)`
+  width: 60%;
+  background-color: #99D420!important;
+  margin-right: 8%!important;
+  transition: transform .4s!important;
+  &:hover {
+    transition: transform .4s;
+    transform: scale(1.07);
+  }
+
+`
+const StyledGloButton = styled(Button)`
+  width: 60%;
+  background-color: #EF6418!important;
+  margin-right: 8%!important;
+  text-decoration: none!important;
+  transition: transform .4s!important;
+  &:hover {
+    transition: transform .4s;
+    transform: scale(1.07);
+  }
+
 `
