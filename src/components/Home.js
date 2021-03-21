@@ -9,12 +9,13 @@ import MobileMenu from './MobileMenu'
 import { Link as RouterLink } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import Popper from './Popper'
-
+import Sidebar from '../images/sidebar.jpg'
+import Contact from './Contact'
 
 
 export default function Home() {
   const { width } = useWindowDimensions()
-  const breakpoint = 1366
+  const breakpoint = 1280
 
 
   function renderDesktop() {
@@ -28,7 +29,7 @@ export default function Home() {
           <WindowDiv>
             <LogoWrapper>
               <StyledLogo src={Logo} />
-              <Popper/>
+              <Popper position="left" />
             </LogoWrapper>
             <BorderDiv>
               <h3>Glo European Windows and Doors Official Partner</h3>
@@ -47,18 +48,21 @@ export default function Home() {
   function renderMobile() {
     return (
       <>
-        <div>
-          <MobileContainerDiv>
+
+        <Slider />
+        <MobileContainerDiv>
+          <MobileLogoWrapper>
             <MobileLogo src={Logo} />
-            <MobileLogo src={GloLogo} />
-          </MobileContainerDiv>
-          <div>
-            <StyledHeading>Windows</StyledHeading>
-          </div>
-          <div>
-            <Slider />
-          </div>
-        </div>
+            <Popper position="bottom" />
+          </MobileLogoWrapper>
+          <MobileWrapperBottom>
+            <BorderDiv>
+              <h3>Glo European Windows and Doors Official Partner</h3>
+            </BorderDiv>
+            <StyledGloLogo src={GloLogo} />
+            <StyledGloButton component={RouterLink} to="/windows">Learn More</StyledGloButton>
+          </MobileWrapperBottom>
+        </MobileContainerDiv>
         <MobileMenu />
       </>
     )
@@ -67,7 +71,7 @@ export default function Home() {
   return (width > breakpoint ? renderDesktop() : renderMobile())
 }
 
-const Bground = "#dbe0dd"
+const Bground = "#c8ceca"
 
 // ________________ DESKTOP STYLING ____________ 
 const LogoWrapper = styled.div`
@@ -85,25 +89,26 @@ const StyledLogo = styled.img`
   width: auto;
   padding: 12px;
   margin-bottom: 10%;
-  margin-right: 10%;
 `
 const StyledGloLogo = styled.img`
   height: 90px;
   width: auto;
   padding: 6px;
   margin-bottom: 10%;
+  margin-top: 10%;
 `
 
 const BorderDiv = styled.div`
   border-top: 2px solid black;
   border-bottom: 2px solid black;
-  margin-right: 5%;
+  margin-left: 8%;
+  margin-right: 8%
 `
 
 const SliderDiv = styled.div`
   overflow: hidden;
   width: 80%;
-  clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
+  // clip-path: polygon(0 0, 95% 0, 100% 100%, 0 100%);
 `
 
 const ContainerDiv = styled.div`
@@ -123,29 +128,48 @@ const WindowDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   text-align: center;
-  background-color: ${Bground};
+  background-image: url("${Sidebar}");
+  background-size: cover;
   overflow: scroll;
-`
-
-const StyledHeading = styled.h3`
-  margin-right: 10%;
- color: red;
 `
 
 // ___________ MOBILE STYLING ________________ 
 
 const MobileContainerDiv = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  margin-top: 2%;
+`
+
+const MobileLogoWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8%;
+  position: absolute;
+  top: 0;
+  right: 0;
 `
 
 const MobileLogo = styled.img`
-  height: 100px;
+  height: 110px;
   width: auto;
   padding: 8px;
-  background-color: rgba(255,255,255,1);
+`
+
+
+const MobileWrapperBottom = styled.div`
+display: flex;
+flex-direction: column;
+width: 100%;
+align-items: center;
+justify-content: space-between;
+margin-bottom: 8%;
+
 `
 
 // __________ SHARED STYLING ___________
@@ -154,7 +178,6 @@ const MobileLogo = styled.img`
 const StyledGloButton = styled(Button)`
   width: 50%;
   background-color: #EF6418!important;
-  margin-right: 8%!important;
   margin-bottom: 20%!important;
   text-decoration: none!important;
   transition: transform .4s!important;

@@ -9,13 +9,14 @@ import Fade from '@material-ui/core/Fade';
 const useStyles = makeStyles((theme) => ({
   paper: {
     padding: theme.spacing(2),
-    backgroundColor: "#efebe6",
+    backgroundColor: "#181818",
+    color: "white",
     borderRadius: "4px",
     boxShadow: "5px 5px 7px black",
   },
 }));
 
-export default function SimplePopper() {
+export default function SimplePopper(props) {
   const classes = useStyles();
   const [anchorEl, setAnchorEl] = React.useState(null);
 
@@ -31,7 +32,7 @@ export default function SimplePopper() {
       <StyledButton aria-describedby={id} type="button"  onClick={handleClick}>
         GET STARTED
       </StyledButton>
-      <Popper id={id} open={open} anchorEl={anchorEl} placement={"left"} transition>
+      <Popper id={id} open={open} anchorEl={anchorEl} placement={props.position} transition>
       {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <div className={classes.paper}>
@@ -49,7 +50,6 @@ export default function SimplePopper() {
 const StyledButton = styled(Button)`
   width: 50%;
   background-color: #99D420!important;
-  margin-right: 8%!important;
   transition: transform .4s!important;
   &:hover {
     transition: transform .4s;
