@@ -10,7 +10,7 @@ import { Link as RouterLink } from 'react-router-dom'
 import Button from '@material-ui/core/Button';
 import Popper from './Popper'
 import Sidebar from '../images/sidebar.jpg'
-import Contact from './Contact'
+
 
 
 export default function Home() {

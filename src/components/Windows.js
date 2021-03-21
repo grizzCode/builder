@@ -54,9 +54,6 @@ function a11yProps(index) {
 }
 
 
-
-
-
 const theme = createMuiTheme({
   overrides: {
     MuiTabs: {
@@ -90,7 +87,7 @@ export default function WindowTabs() {
         </p>
         </HeadTextWrapper>
       </HeaderWrapper>
-      <ProcessWrapper>
+      {/* <ProcessWrapper>
         <ProcessHeading>
           GUIDED PROCESS
         </ProcessHeading>
@@ -112,13 +109,13 @@ export default function WindowTabs() {
 
  
 -  
-      </ProcessWrapper>
+      </ProcessWrapper> */}
       <ThemeProvider theme={theme}>
         <AppBar position="static">
           <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
             <Tab label="Air-Lux" {...a11yProps(0)} />
-            <Tab label="Aluminum Windows" {...a11yProps(1)} />
-            <Tab label="Aluminum Doors" {...a11yProps(2)} />
+            <Tab label="Glo Aluminum Windows" {...a11yProps(1)} />
+            <Tab label="Glo Aluminum Doors" {...a11yProps(2)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>

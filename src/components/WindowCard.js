@@ -23,7 +23,7 @@ export default function MediaCard(props) {
 
   return (
     <Card className={classes.root}>
-      <CardActionArea href={props.href}>
+      <CardActionArea href={props.href} target="_blank" rel="noopener noreferrer">
         <CardMedia
           className={classes.media}
           image={props.image}
