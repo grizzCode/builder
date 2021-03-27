@@ -19,7 +19,7 @@ import PCD from '../images/Glo_Img/PC postless corner door.jpg'
 import PD from '../images/Glo_Img/PD air lux pivot door.jpg'
 import SD from '../images/Glo_Img/SD air lux sliding door.jpg'
 import Logo from '../images/logo2.png'
-
+import Menu from './Menu'
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -127,6 +127,7 @@ export default function WindowTabs() {
               series="PD"
               title="Air-Lux Pivot Door"
               content="The ground-breaking Air-Lux Pivot Door provides a unique and enviable aesthetic without the typical drawbacks associated with pivoting entrance doors. The robust and dynamic hardware allows for incredibly large door panels to effortlessly rotate on a central or lateral axis, providing a show-stopping alternative to conventional doors at oversized entrance locations. A state-of-the-art air and […]"
+              
             />
             <Card
               image={SD}
@@ -214,13 +215,14 @@ export default function WindowTabs() {
           </CardWrapperDiv>
         </TabPanel>
       </ThemeProvider>
+      <Menu position="top"/>
     </>
   );
 }
 
 const CardWrapperDiv = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 `
 

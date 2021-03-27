@@ -48,14 +48,14 @@ export default function SimplePopper(props) {
 }
 
 const StyledButton = styled(Button)`
-  width: 50%;
+  width: 160px;
   background-color: #99D420!important;
   transition: transform .4s!important;
   &:hover {
     transition: transform .4s;
     transform: scale(1.07);
   }
-
+  
 `
 
 const ContactA = styled.a`
