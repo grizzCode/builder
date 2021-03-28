@@ -7,22 +7,11 @@ import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Box from '@material-ui/core/Box';
-import A5 from '../images/Glo_Img/A5 window-r.jpg'
-import A7 from '../images/Glo_Img/A7 window-r.jpg'
-import CW from '../images/Glo_Img/CW curtain wall window-r.jpg'
-import DW from '../images/Glo_Img/DW air lux descending window-r.jpg'
-import A5D from '../images/Glo_Img/A5 door-r.jpg'
-import A7D from '../images/Glo_Img/A7 door-r.jpg'
-import LSD from '../images/Glo_Img/LS lift and slide door-r.jpg'
-import PCD from '../images/Glo_Img/PC postless corner door-r.jpg'
-import PD from '../images/Glo_Img/PD air lux pivot door-r.jpg'
-import SD from '../images/Glo_Img/SD air lux sliding door-r.jpg'
 import Logo from '../images/logo2.png'
 import Menu from './Menu'
 import Button from '@material-ui/core/Button';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faReceipt } from '@fortawesome/free-solid-svg-icons'
-import Hero from '../images/Glo_Img/Banner image.jpg'
 import MobileMenu from './MobileMenu'
 import { useWindowDimensions } from './Providers/WindowProvider'
 
@@ -134,7 +123,7 @@ return (
               </p>
             </HeadTextWrapper>
           </HeaderWrapper>
-          <HeroImg src={Hero} />
+          <HeroImg src="https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904732/T%20AND%20T%20BUILDERS/Banner_image_qr9hmh.jpg"/>
           <BodyWrapper>
             <QuoteWrapper>
               <FontAwesomeIcon icon={faReceipt} size="5x" color="#EC3C0D" />
@@ -172,7 +161,7 @@ return (
         <TabPanel value={value} index={1}>
           <CardWrapperDiv>
             <Card
-              image={PD}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904350/T%20AND%20T%20BUILDERS/PD_air_lux_pivot_door-r_ncmb3g.jpg'
               imageTitle="Air Lux Pivot Door Series"
               href="https://glowindows.com/product/air-lux-pivot-door/"
               series="PD"
@@ -181,7 +170,7 @@ return (
 
             />
             <Card
-              image={SD}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904353/T%20AND%20T%20BUILDERS/SD_air_lux_sliding_door-r_bdnojr.jpg'
               imageTitle="Air Lux Sliding Door Series"
               href="https://glowindows.com/product/sliding-doors-air-lux/"
               series="SD"
@@ -189,7 +178,7 @@ return (
               content="Once again upending the fenestration industry with superior design and construction, the Air-Lux Sliding Door leaves lesser door systems in the dust with its ability to span incredible dimensions and provide 100% impermeable water and air sealing. This patented sealing system combined with the ability to accommodate sliding leaf weights of up to nearly 4000lbs […]"
             />
             <Card
-              image={DW}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904347/T%20AND%20T%20BUILDERS/DW_air_lux_descending_window-r_ypnalh.jpg'
               imageTitle="Air Lux DW Window Series"
               href="https://glowindows.com/product/air-lux-descending-window/"
               series="DW"
@@ -202,7 +191,7 @@ return (
         <TabPanel value={value} index={2}>
           <CardWrapperDiv>
             <Card
-              image={A5}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904352/T%20AND%20T%20BUILDERS/A5_window-r_pr6zmo.jpg'
               imageTitle="Glo A5 Window Series"
               href="https://glowindows.com/product/a5-double-triple-pane-european-windows/"
               series="A5"
@@ -210,7 +199,7 @@ return (
               content="A high performance glazing unit with a narrow frame. The A5 double pane and triple pane aluminum windows provide modern aesthetic and thermal performance."
             />
             <Card
-              image={A7}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904345/T%20AND%20T%20BUILDERS/A7_window-r_mcyoku.jpg'
               imageTitle="Glo A7 Window Series"
               href="https://glowindows.com/product/a7-aluminum-triple-pane-windows/"
               series="A7"
@@ -218,7 +207,7 @@ return (
               content="An all aluminum frame with continuous insulation provides excellent durability and quality. The A7 triple pane aluminum windows achieve a greater level of energy performance and aesthetically clean architectural lines."
             />
             <Card
-              image={CW}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904345/T%20AND%20T%20BUILDERS/CW_curtain_wall_window-r_tbruui.jpg'
               imageTitle="Glo CW Window Series"
               href="https://glowindows.com/product/curtain-wall-double-pane/"
               series="CW"
@@ -231,7 +220,7 @@ return (
         <TabPanel value={value} index={3}>
           <CardWrapperDiv>
             <Card
-              image={A5D}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904349/T%20AND%20T%20BUILDERS/A5_door-r_hx1sdr.jpg'
               imageTitle="Glo A5 Door Series"
               href="https://glowindows.com/product/a5-aluminum-doors/"
               series="A5"
@@ -239,7 +228,7 @@ return (
               content="The A5 double pane and triple pane aluminum doors are the perfect union of cost effective efficiency and beauty. The sleek frame, thermal performance and European hardware is sure to be a great solution for an array of projects."
             />
             <Card
-              image={A7D}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904351/T%20AND%20T%20BUILDERS/A7_door-r_jmvyo3.jpg'
               imageTitle="Glo A7 Door Series"
               href="https://glowindows.com/product/a7-triple-pane-aluminum-entry-doors/"
               series="A7"
@@ -247,7 +236,7 @@ return (
               content="The A7 triple pane aluminum doors are the FIRST Passive House Certified doors in the United States. Comprised of a larger thermal break, multiple air seals, argon gas and low-e glass: Redefining the aluminum door experience."
             />
             <Card
-              image={LSD}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904348/T%20AND%20T%20BUILDERS/LS_lift_and_slide_door-r_srbf4j.jpg'
               imageTitle="Glo Lift & Slide Door Series"
               href="https://glowindows.com/product/lift-and-slide-door/"
               series="LS"
@@ -255,7 +244,7 @@ return (
               content="Our modern Lift and Slide doors establish a new paradigm of style, precision, and durability sure to make a statement in any setting. Designed with quality and purpose, the lift and slide door is custom crafted to meet a wide variety of functional and aesthetic requirements while also delivering excellent performance."
             />
             <Card
-              image={PCD}
+              image='https://res.cloudinary.com/grizzcode-llc/image/upload/v1616904353/T%20AND%20T%20BUILDERS/PC_postless_corner_door-r_u8xm2q.jpg'
               imageTitle="Glo Postless Corner Door Series"
               href="https://glowindows.com/product/postless-corner-door/"
               series="PC"
@@ -306,7 +295,7 @@ font-weight: 400;
 `
 
 const QuoteWrapper = styled.div`
-  background-color: #3d3d3d;
+  background-color: #2d2d2d;
   color: #EC3C0D;
   text-align: center;
   border-radius: 4px;
