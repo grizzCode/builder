@@ -6,7 +6,6 @@ import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import A5 from '../images/Glo_Img/A5 window-r.jpg'
 import A7 from '../images/Glo_Img/A7 window-r.jpg'
@@ -41,7 +40,7 @@ function TabPanel(props) {
     >
       {value === index && (
         <Box p={3}>
-          <Typography>{children}</Typography>
+          {children}
         </Box>
       )}
     </div>
@@ -113,7 +112,6 @@ return (
             aria-label="simple tabs example" 
             variant="scrollable"
             scrollButtons="on"
-            centered 
           >
             <Tab label="Overview" {...a11yProps(0)} />
             <Tab label="Air-Lux" {...a11yProps(1)} />
@@ -308,7 +306,9 @@ font-weight: 400;
 `
 
 const QuoteWrapper = styled.div`
-  border: 1px solid #EC3C0D;
+  background-color: #3d3d3d;
+  color: #EC3C0D;
+  text-align: center;
   border-radius: 4px;
   width: 20%;
   height: 444 px;
@@ -318,6 +318,9 @@ const QuoteWrapper = styled.div`
   align-items: center;
   padding: 2%;
   min-width: 300px;
+  @media (max-width: 1124px) {
+    margin-top: 2%;
+  }
 `
 const QuoteText = styled.div`
   margin: 4%;
@@ -355,6 +358,9 @@ const LayoutDiv = styled.div`
   justify-content: space-between;
   align-items: center;
   margin-bottom: 60px;
+  @media (max-width: 1124px) {
+    width: 85%;
+  }
 
 `
 
@@ -363,13 +369,6 @@ width: 100%;
 height: 500px;
 object-fit: cover;
 overflow: hidden;
-@media (max-width: 767px) {
-  width: 340px;
-  margin-bottom: 8%;
-  position: relative;
-  top: 0;
-}
-
 `
 
 const StyledUl = styled.ul`
