@@ -8,20 +8,28 @@ import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
-import A5 from '../images/Glo_Img/A5 window.jpg'
-import A7 from '../images/Glo_Img/A7 window.jpg'
-import CW from '../images/Glo_Img/CW curtain wall window.jpg'
-import DW from '../images/Glo_Img/DW air lux descending window .jpg'
-import A5D from '../images/Glo_Img/A5 door.jpg'
-import A7D from '../images/Glo_Img/A7 door.jpg'
-import LSD from '../images/Glo_Img/LS lift and slide door.jpg'
-import PCD from '../images/Glo_Img/PC postless corner door.jpg'
-import PD from '../images/Glo_Img/PD air lux pivot door.jpg'
-import SD from '../images/Glo_Img/SD air lux sliding door.jpg'
+import A5 from '../images/Glo_Img/A5 window-r.jpg'
+import A7 from '../images/Glo_Img/A7 window-r.jpg'
+import CW from '../images/Glo_Img/CW curtain wall window-r.jpg'
+import DW from '../images/Glo_Img/DW air lux descending window-r.jpg'
+import A5D from '../images/Glo_Img/A5 door-r.jpg'
+import A7D from '../images/Glo_Img/A7 door-r.jpg'
+import LSD from '../images/Glo_Img/LS lift and slide door-r.jpg'
+import PCD from '../images/Glo_Img/PC postless corner door-r.jpg'
+import PD from '../images/Glo_Img/PD air lux pivot door-r.jpg'
+import SD from '../images/Glo_Img/SD air lux sliding door-r.jpg'
 import Logo from '../images/logo2.png'
 import Menu from './Menu'
+import Button from '@material-ui/core/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faReceipt } from '@fortawesome/free-solid-svg-icons'
+import Hero from '../images/Glo_Img/Banner image.jpg'
+import MobileMenu from './MobileMenu'
+import { useWindowDimensions } from './Providers/WindowProvider'
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
+
 
   return (
     <div
@@ -62,63 +70,108 @@ const theme = createMuiTheme({
         flexGrow: 1,
       },
     },
+    MuiCard: {
+      root: {
+        color: '#383838',
+      },
+    },
   },
 });
 
 
 export default function WindowTabs() {
   const [value, setValue] = React.useState(0);
+  const { width } = useWindowDimensions()
+  const breakpoint = 1180
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
-  return (
+  function renderDesktop() {
+    return(
+      <>
+      <Menu/>
+      </>
+    )
+  }
+
+  
+  function renderMobile() {
+    return (
+      <> 
+      <MobileMenu />
+      </>
+  );}
+
+return (
     <>
-      <HeaderWrapper>
-        <StyledLogo src={Logo}/>
-        <HeadTextWrapper>
-        <Heading>T&T Mountain Builders is your full-service Utah dealer for Glo and Air-Lux window and door products</Heading>
-        <p> 
-          As a successful General Contractor specializing in highly energy efficient custom mountain homes, we have the 
-          full-spectrum knowledge to ensure your project is as smooth and successful as possible from inception to completion 
-          and continued life cycle. We have worked with these windows and doors for several years, and it was a natural extension of
-           our business to provide and service these incredibly well engineered European door and window packages. 
-        </p>
-        </HeadTextWrapper>
-      </HeaderWrapper>
-      {/* <ProcessWrapper>
-        <ProcessHeading>
-          GUIDED PROCESS
-        </ProcessHeading>
-        <ProcessBanner>
-          <Banner1P>Starts with selecting the best products to compliment your design and project constraints.</Banner1P> 
-        </ProcessBanner>
-        <ProcessBanner>
-          <Banner2P>In-house installation service with a specially-trained crew that knows the tolerances and demands of correct installation of these products.</Banner2P> 
-        </ProcessBanner>
-        <ProcessBanner>
-          <Banner3P>Continued service and adjustment after installation to ensure an exceptional ownership experience.</Banner3P> 
-        </ProcessBanner>
-        <ProcessBanner>
-          <Banner4P>Single point of contact means that we accept full responsibility for and are invested in the success and continued support of your door and window package.</Banner4P>
-        </ProcessBanner>
-        
-
- 
-
- 
--  
-      </ProcessWrapper> */}
       <ThemeProvider theme={theme}>
         <AppBar position="static">
-          <Tabs value={value} onChange={handleChange} aria-label="simple tabs example" centered>
-            <Tab label="Air-Lux" {...a11yProps(0)} />
-            <Tab label="Glo Aluminum Windows" {...a11yProps(1)} />
-            <Tab label="Glo Aluminum Doors" {...a11yProps(2)} />
+          <Tabs value={value} 
+            onChange={handleChange} 
+            aria-label="simple tabs example" 
+            variant="scrollable"
+            scrollButtons="on"
+            centered 
+          >
+            <Tab label="Overview" {...a11yProps(0)} />
+            <Tab label="Air-Lux" {...a11yProps(1)} />
+            <Tab label="Glo Aluminum Windows" {...a11yProps(2)} />
+            <Tab label="Glo Aluminum Doors" {...a11yProps(3)} />
           </Tabs>
         </AppBar>
         <TabPanel value={value} index={0}>
+          <HeaderWrapper>
+            <StyledLogo src={Logo} />
+            <HeadTextWrapper>
+              <Heading>
+                T&T Mountain Builders is your full-service Utah dealer for Glo and Air-Lux window and door products
+              </Heading>
+              <p>
+                As a successful General Contractor specializing in highly energy efficient custom mountain homes, we have the
+                full-spectrum knowledge to ensure your project is as smooth and successful as possible from inception to completion
+                and continued life cycle. We have worked with these windows and doors for several years, and it was a natural extension of
+                our business to provide and service these incredibly well engineered European door and window packages.
+              </p>
+            </HeadTextWrapper>
+          </HeaderWrapper>
+          <HeroImg src={Hero} />
+          <BodyWrapper>
+            <QuoteWrapper>
+              <FontAwesomeIcon icon={faReceipt} size="5x" color="#EC3C0D" />
+              <QuoteText>
+                Tell us a little bit about your project and receive a free, no-obligation price quote.
+              </QuoteText>
+              <QuoteButton href="https://glowindows.com/request-a-quote/">REQUEST A QUOTE</QuoteButton>
+              </QuoteWrapper>
+           
+              <LayoutDiv>
+                <h4>GUIDED PROCESS</h4>
+                <StyledUl>
+                  <StyledLi>
+                    Starts with selecting the best products to compliment your design and project constraints.
+                  </StyledLi>
+                  <StyledLi>
+                    In-house installation service with a specially-trained crew that knows the tolerances
+                    and demands of correct installation of these products.
+                  </StyledLi>
+                  <StyledLi>
+                    Continued service and adjustment after installation to ensure an exceptional ownership experience.
+                  </StyledLi>
+                  <StyledLi>
+                    Single point of contact means that we accept full responsibility for and are invested in the success
+                    and continued support of your door and window package.
+                   </StyledLi>
+                </StyledUl>
+              </LayoutDiv>
+          </BodyWrapper>
+          
+
+
+
+        </TabPanel>
+        <TabPanel value={value} index={1}>
           <CardWrapperDiv>
             <Card
               image={PD}
@@ -127,7 +180,7 @@ export default function WindowTabs() {
               series="PD"
               title="Air-Lux Pivot Door"
               content="The ground-breaking Air-Lux Pivot Door provides a unique and enviable aesthetic without the typical drawbacks associated with pivoting entrance doors. The robust and dynamic hardware allows for incredibly large door panels to effortlessly rotate on a central or lateral axis, providing a show-stopping alternative to conventional doors at oversized entrance locations. A state-of-the-art air and […]"
-              
+
             />
             <Card
               image={SD}
@@ -148,7 +201,7 @@ export default function WindowTabs() {
           </CardWrapperDiv>
         </TabPanel>
 
-        <TabPanel value={value} index={1}>
+        <TabPanel value={value} index={2}>
           <CardWrapperDiv>
             <Card
               image={A5}
@@ -177,7 +230,7 @@ export default function WindowTabs() {
           </CardWrapperDiv>
         </TabPanel>
 
-        <TabPanel value={value} index={2}>
+        <TabPanel value={value} index={3}>
           <CardWrapperDiv>
             <Card
               image={A5D}
@@ -215,26 +268,29 @@ export default function WindowTabs() {
           </CardWrapperDiv>
         </TabPanel>
       </ThemeProvider>
-      <Menu position="top"/>
+    {width > breakpoint ? renderDesktop() : renderMobile()}
     </>
-  );
+    )
 }
 
 const CardWrapperDiv = styled.div`
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  margin-bottom: 60px;
 `
 
 const HeadTextWrapper = styled.div`
   width: 80%;
   margin: auto;
   margin-bottom: 2%;
+  margin-top: 2%;
 `
 
 const StyledLogo = styled.img`
   height: 120px;
-  margin: 2%;
+  margin-left: 2%;
+  margin-right: 2%;
 
 `
 
@@ -242,9 +298,85 @@ const HeaderWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 1124px) {
+    flex-direction: column;
+  }
 `
 
 const Heading = styled.h2`
 font-weight: 400;
+`
 
+const QuoteWrapper = styled.div`
+  border: 1px solid #EC3C0D;
+  border-radius: 4px;
+  width: 20%;
+  height: 444 px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2%;
+  min-width: 300px;
+`
+const QuoteText = styled.div`
+  margin: 4%;
+`
+
+const QuoteButton = styled(Button)`
+  width: 60%;
+  background-color: #EC3C0D!important;
+  margin-bottom: 10%!important;
+  text-decoration: none!important;
+  transition: transform .4s!important;
+  &:hover {
+    transition: transform .4s;
+    transform: scale(1.07);
+  }
+
+`
+
+const BodyWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  margin-bottom: 60px;
+  align-items: center;
+  justify-content: space-around;
+  @media (max-width: 1124px) {
+    flex-direction: column;
+  }
+`
+
+const LayoutDiv = styled.div`
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+
+`
+
+const HeroImg = styled.img`
+width: 100%;
+height: 500px;
+object-fit: cover;
+overflow: hidden;
+@media (max-width: 767px) {
+  width: 340px;
+  margin-bottom: 8%;
+  position: relative;
+  top: 0;
+}
+
+`
+
+const StyledUl = styled.ul`
+margin-top: 0;
+list-style-type: square;
+`
+const StyledLi = styled.li`
+  margin-top: 2%;
+  
 `

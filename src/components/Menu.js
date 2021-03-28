@@ -44,9 +44,9 @@ export default function FadeMenu(props) {
 
   const themeConfig = createMuiTheme(themeObject)
 
-  console.log(props.position)
+  
 
-  if (props.position === "bottom") {
+
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
@@ -139,104 +139,7 @@ export default function FadeMenu(props) {
         </Button>
       </ThemeProvider>
     </NavDiv>
-  );}
-  else if (props.position === "top")  {
-    return(
-      <>
-      <NavDivTop>
-      <ThemeProvider theme={themeConfig}>
-        <StyledButton to="/" component={RouterLink}>
-          Home
-        </StyledButton>
-        <StyledButton to="/windows" component={RouterLink}>
-          European Windows & Doors
-        </StyledButton>
-        <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
-          Current
-        </StyledButton>
-        <Menu
-          id="progress-menu"
-          anchorEl={anchorEl}
-          keepMounted
-          open={open}
-          onClose={handleClose}
-          TransitionComponent={Fade}
-        >
-          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
-            Robertson
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
-            11 Haus
-          </StyledMenuItem>
-        </Menu>
-        <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
-          Completed
-        </StyledButton>
-        <Menu
-          id="fade-menu"
-          anchorEl={anchorEl2}
-          keepMounted
-          open={open2}
-          onClose={handleClose2}
-          TransitionComponent={Fade}
-        >
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/stagecoach">
-              Stagecoach
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/meadows">
-              Meadows Passive House
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/interlaken">
-              Interlaken
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/canyon">
-              Pineridge
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/sterlingwood">
-              Sterlingwood
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/hitching_post">
-              Hitching Post
-          </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose2} component={RouterLink} to="/maple">
-              Maple Passive Haus
-          </StyledMenuItem>
-        </Menu>
-        <StyledButton component={RouterLink} to="/about">
-            About
-        </StyledButton>
-        <StyledButton component={RouterLink} to="/method">
-            Method
-        </StyledButton>
-        <StyledButton component={RouterLink} to="/testimonials">
-          Testimonials
-        </StyledButton>
-        <StyledButton component={RouterLink} to="/contact">
-          Contact
-        </StyledButton>
-        <StyledA href="https://coconstruct.com/app/skins/default/default.aspx">
-          <StyledButton>
-            Client Login
-          </StyledButton>
-        </StyledA>
-        <StyledButton component={RouterLink} to="/partners">
-          Partners
-        </StyledButton>
-        <Button>
-          <a href="https://www.instagram.com/tandttravis/?hl=en">
-            <StyledInstagram />
-          </a>
-        </Button>
-        <Button>
-          <a href="https://www.houzz.com/professionals/general-contractors/tandt-mountain-builders-pfvwus-pf~629659661">
-            <LogoImg src={HouzzIcon} width="20" height="20" />
-          </a>
-        </Button>
-      </ThemeProvider>
-    </NavDivTop>
-      </>
-    )
-  }
+  )
 }
 
 
@@ -264,17 +167,6 @@ const NavDiv = styled.div`
   bottom: 0;
   right: 0;
   // border-radius: 4px 0px 0px 0px;
-`
-
-const NavDivTop = styled.div`
-  width: auto;
-  z-index: 999;
-  height: 44px;
-  background-color: #181818;
-  text-align: right;
-  position: fixed;
-  top: 0;
-  right: 0;
 `
 
 const StyledMenuItem = styled(MenuItem)`
