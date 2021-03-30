@@ -8,7 +8,7 @@ import AboutImg from '../images/about-img.jpeg'
 export default function About() {
 
   return (
-    <div>
+    <WrapperDiv>
       <StyledText>
         <StyledP>At T and T Mountain Builders our primary focus is building comfortable, healthy and durable homes.</StyledP>
        <AbImgDiv>
@@ -25,9 +25,14 @@ export default function About() {
         <LogoImg1 src={Certified} />
         <LogoImg1 src={Doe} />
       </ImgDiv>
-    </div>
+    </WrapperDiv>
   )
 }
+
+const WrapperDiv = styled.div`
+  height: 100vh;
+  overflow: scroll;
+`
 
 const StyledText = styled.div`
   margin: auto;
