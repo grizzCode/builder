@@ -12,7 +12,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 
 
 
-export default function FadeMenu() {
+export default function FadeMenu(props) {
   const [anchorEl, setAnchorEl] = React.useState(null);
   const [anchorEl2, setAnchorEl2] = React.useState(null);
   const open = Boolean(anchorEl);
@@ -44,11 +44,17 @@ export default function FadeMenu() {
 
   const themeConfig = createMuiTheme(themeObject)
 
+  
+
+
   return (
     <NavDiv>
       <ThemeProvider theme={themeConfig}>
         <StyledButton to="/" component={RouterLink}>
           Home
+        </StyledButton>
+        <StyledButton to="/windows" component={RouterLink}>
+          European Windows & Doors
         </StyledButton>
         <StyledButton aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
           Current
@@ -64,9 +70,9 @@ export default function FadeMenu() {
           <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
             Robertson
           </StyledMenuItem>
-          <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
+          {/* <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
             11 Haus
-          </StyledMenuItem>
+          </StyledMenuItem> */}
         </Menu>
         <StyledButton aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
           Completed
@@ -133,12 +139,13 @@ export default function FadeMenu() {
         </Button>
       </ThemeProvider>
     </NavDiv>
-  );
+  )
 }
 
 
 const StyledButton = styled(Button)`
   &&& {
+    border-radius: 0;
     color: white;
     margin-right: 6px;
     margin-left: 6px;

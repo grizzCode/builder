@@ -76,6 +76,9 @@ export default function MobileMenu() {
           <StyledMenuItem to="/" component={RouterLink}>
             Home
         </StyledMenuItem>
+          <StyledMenuItem to="/windows" component={RouterLink}>
+            European Doors & Windows
+        </StyledMenuItem>
           <StyledMenuItem aria-controls="progress-menu" aria-haspopup="true" onClick={handleClick}>
             Current
         </StyledMenuItem>
@@ -98,9 +101,9 @@ export default function MobileMenu() {
             <StyledMenuItem onClick={handleClose} component={RouterLink} to="/robertson">
               Robertson
           </StyledMenuItem>
-            <StyledMenuItem onClick={handleClose} component={RouterLink} to="/pineridge">
-              Pineridge
-          </StyledMenuItem>
+            {/* <StyledMenuItem onClick={handleClose} component={RouterLink} to="/11_haus">
+              11 Haus
+          </StyledMenuItem> */}
           </Menu>
           <StyledMenuItem aria-controls="fade-menu" aria-haspopup="true" onClick={handleClick2}>
             Completed
