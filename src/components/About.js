@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import Certified from '../images/builder-wide-logo.jpg'
 import Doe from '../images/doe_zh_partner_logo.jpg'
 import Button from '@material-ui/core/Button';
-
+import AboutImg from '../images/about-img.jpeg'
 
 export default function About() {
 
@@ -11,6 +11,9 @@ export default function About() {
     <div>
       <StyledText>
         <StyledP>At T and T Mountain Builders our primary focus is building comfortable, healthy and durable homes.</StyledP>
+       <AbImgDiv>
+        <AbImg src={AboutImg}/>
+       </AbImgDiv>
         <StyledP>T&T Mountain Builders was founded by Travis and Tammy Smith in 2002 as a custom carpentry company, and has evolved into a boutique home building company, typically only constructing 1-2 homes at a time. This allows us to focus on the fine details that typically get lost with larger firms.</StyledP>
         <StyledP>We employ passive house standards that include air tight construction, super insulated building envelopes, high performance European windows, and energy recovery ventilation. This all equates to an extremely high level of comfort for our clients. Our strategies are based on an understanding of building science, and of how each component relates to the whole system. We source only finishes that are low/no VOC to ensure a healthy indoor air environment.  We excel at our water management strategies on the exterior, ensuring long term durability.</StyledP>
         <ButtonDiv>
@@ -63,4 +66,15 @@ const ButtonDiv = styled.div`
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+`
+
+const AbImg = styled.img`
+  height: 400px;
+  width: auto;
+  margin: auto;
+` 
+
+const AbImgDiv = styled.div`
+display: flex;
+align-items: center;
 `

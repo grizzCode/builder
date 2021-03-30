@@ -5,6 +5,8 @@ import Popper from '@material-ui/core/Popper';
 import styled from 'styled-components'
 import Button from '@material-ui/core/Button';
 import Fade from '@material-ui/core/Fade';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTimesCircle } from '@fortawesome/free-solid-svg-icons'
 
 const useStyles = makeStyles((theme) => ({
   paper: {
@@ -36,6 +38,9 @@ export default function SimplePopper(props) {
       {({ TransitionProps }) => (
           <Fade {...TransitionProps} timeout={350}>
             <div className={classes.paper}>
+              <CloseDiv>
+               <FontAwesomeIcon icon={faTimesCircle} size="1x" color="lightgrey" onClick={handleClick} />
+              </CloseDiv>
               <h4>WE WANT TO HEAR ABOUT YOUR PROJECT</h4>
               <p>Reach out to us:</p>
               <ContactA href="mailto:travis@tandtmountainbuilders.com">travis@tandtmountainbuilders.com</ContactA>
@@ -63,6 +68,10 @@ const ContactA = styled.a`
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 30px;
   width: 100%;
+`
+
+const CloseDiv = styled.div`
+  display: flex;
+  justify-content: flex-end;
 `

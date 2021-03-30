@@ -103,7 +103,7 @@ return (
             scrollButtons="on"
           >
             <Tab label="Overview" {...a11yProps(0)} />
-            <Tab label="Air-Lux" {...a11yProps(1)} />
+            <Tab label="Air-Lux Doors & Windows" {...a11yProps(1)} />
             <Tab label="Glo Aluminum Windows" {...a11yProps(2)} />
             <Tab label="Glo Aluminum Doors" {...a11yProps(3)} />
           </Tabs>
@@ -128,7 +128,7 @@ return (
             <QuoteWrapper>
               <FontAwesomeIcon icon={faReceipt} size="5x" color="#EC3C0D" />
               <QuoteText>
-                Tell us a little bit about your project and receive a free, no-obligation price quote.
+                Send us your project to learn more about window and door solutions
               </QuoteText>
               <QuoteButton href="https://glowindows.com/request-a-quote/">REQUEST A QUOTE</QuoteButton>
               </QuoteWrapper>
